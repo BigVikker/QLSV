@@ -90,5 +90,28 @@ namespace QLSV.ChirldForm
                 comboBox_brand.Items.Add(i.BrandName);
             }
         }
+
+        private void checkBox_status_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox_onlyNumberApc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox_promoPrice_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox_stock_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

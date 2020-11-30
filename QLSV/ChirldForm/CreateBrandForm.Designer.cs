@@ -64,24 +64,25 @@
             // 
             // button_submit
             // 
-            this.button_submit.Location = new System.Drawing.Point(152, 137);
+            this.button_submit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button_submit.Location = new System.Drawing.Point(118, 120);
             this.button_submit.Name = "button_submit";
-            this.button_submit.Size = new System.Drawing.Size(115, 23);
+            this.button_submit.Size = new System.Drawing.Size(149, 40);
             this.button_submit.TabIndex = 3;
             this.button_submit.Text = "xác nhận";
-            this.button_submit.UseVisualStyleBackColor = true;
+            this.button_submit.UseVisualStyleBackColor = false;
             this.button_submit.Click += new System.EventHandler(this.button_submit_Click);
             // 
-            // CreateBrand
+            // CreateBrandForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 212);
+            this.ClientSize = new System.Drawing.Size(417, 181);
             this.Controls.Add(this.button_submit);
             this.Controls.Add(this.textBox_brandName);
             this.Controls.Add(this.label_brandName);
             this.Controls.Add(this.label1);
-            this.Name = "CreateBrand";
+            this.Name = "CreateBrandForm";
             this.Text = "CreateBrand";
             this.ResumeLayout(false);
             this.PerformLayout();
