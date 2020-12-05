@@ -79,9 +79,9 @@
             this.SidePanel.Controls.Add(this.btn_product);
             this.SidePanel.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidePanel.Location = new System.Drawing.Point(0, 50);
+            this.SidePanel.Location = new System.Drawing.Point(0, 43);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(200, 500);
+            this.SidePanel.Size = new System.Drawing.Size(200, 507);
             this.SidePanel.TabIndex = 1;
             this.SidePanel.UseWaitCursor = true;
             // 
@@ -231,7 +231,7 @@
             this.btn_product.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(67)))));
             this.btn_product.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_product.selected = false;
-            this.btn_product.Size = new System.Drawing.Size(200, 125);
+            this.btn_product.Size = new System.Drawing.Size(203, 125);
             this.btn_product.TabIndex = 0;
             this.btn_product.Text = "Product";
             this.btn_product.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -243,13 +243,14 @@
             // SideUnderPanel
             // 
             this.SideUnderPanel.BackColor = System.Drawing.Color.Transparent;
-            this.SideUnderPanel.Location = new System.Drawing.Point(60, 44);
+            this.SideUnderPanel.Location = new System.Drawing.Point(55, 44);
             this.SideUnderPanel.Name = "SideUnderPanel";
-            this.SideUnderPanel.Size = new System.Drawing.Size(1017, 506);
+            this.SideUnderPanel.Size = new System.Drawing.Size(1020, 503);
             this.SideUnderPanel.TabIndex = 2;
             // 
             // HeaderPanel
             // 
+            this.HeaderPanel.AutoSize = true;
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.HeaderPanel.Controls.Add(this.LabelTextBox);
             this.HeaderPanel.Controls.Add(this.MinimizedBtn);
@@ -257,7 +258,7 @@
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1080, 50);
+            this.HeaderPanel.Size = new System.Drawing.Size(1080, 43);
             this.HeaderPanel.TabIndex = 0;
             // 
             // LabelTextBox
@@ -297,7 +298,7 @@
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
             this.ExitBtn.ImageActive = null;
-            this.ExitBtn.Location = new System.Drawing.Point(1038, 10);
+            this.ExitBtn.Location = new System.Drawing.Point(1028, 10);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(30, 30);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -330,6 +331,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.UnderPanel.ResumeLayout(false);
+            this.UnderPanel.PerformLayout();
             this.SidePanel.ResumeLayout(false);
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
@@ -343,7 +345,6 @@
 
         private Bunifu.Framework.UI.BunifuElipse RoundForm;
         private System.Windows.Forms.Panel UnderPanel;
-        private System.Windows.Forms.Panel HeaderPanel;
         private Bunifu.Framework.UI.BunifuDragControl HeaderDragControl;
         private Bunifu.Framework.UI.BunifuImageButton ExitBtn;
         private Bunifu.Framework.UI.BunifuImageButton MinimizedBtn;
@@ -356,6 +357,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton ReportForm;
         private System.Windows.Forms.Panel SideUnderPanel;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox LabelTextBox;
+        public System.Windows.Forms.Panel HeaderPanel;
     }
 }
 

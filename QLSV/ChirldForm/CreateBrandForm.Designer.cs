@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 181);
+            this.ClientSize = new System.Drawing.Size(395, 175);
             this.Controls.Add(this.button_submit);
             this.Controls.Add(this.textBox_brandName);
             this.Controls.Add(this.label_brandName);

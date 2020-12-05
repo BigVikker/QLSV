@@ -26,11 +26,11 @@ namespace QLSV
         {
             if (e == true)
             {//dark
-                DTGV.BackgroundColor = Color.FromArgb(54, 57, 63);
+                dataGridView1.BackgroundColor = Color.FromArgb(54, 57, 63);
                 this.BackColor = Color.FromArgb(54, 57, 63);
             } else if (e == false)
             {//light
-                DTGV.BackgroundColor = Color.White;
+                dataGridView1.BackgroundColor = Color.White;
                 this.BackColor = Color.White;
             }
         }
@@ -71,7 +71,7 @@ namespace QLSV
             {
                 if (e.ColumnIndex == 5)
                 {
-                    var idBrand = DTGV.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    var idBrand = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                     string url = GlobalVariable.url + "api/brand/delete?id=" + idBrand;
                     DialogResult dialogResult = MessageBox.Show("Ban co muon xoa Brand hay khong ?", "Canh Bao", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
@@ -106,12 +106,12 @@ namespace QLSV
                 {
                     if (isClick == false)
                     {
-                        DataGridViewCell cell = DTGV.Rows[e.RowIndex].Cells[1];
-                        DTGV.CurrentCell = cell;
-                        DTGV.ReadOnly = false;
-                        foreach (DataGridViewRow row in this.DTGV.Rows)
+                        DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[1];
+                        dataGridView1.CurrentCell = cell;
+                        dataGridView1.ReadOnly = false;
+                        foreach (DataGridViewRow row in this.dataGridView1.Rows)
                         {
-                            for (int i = 0; i < DTGV.Columns.Count; i++)
+                            for (int i = 0; i < dataGridView1.Columns.Count; i++)
                             {
                                 if (row.Index != e.RowIndex || i != 1)
                                     row.Cells[i].ReadOnly = true;
@@ -125,11 +125,11 @@ namespace QLSV
                     }
                     else
                     {
-                        var newBrandName = DTGV.Rows[e.RowIndex].Cells[1].Value.ToString();
+                        var newBrandName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                         //MessageBox.Show(newBrandName);
                         var json = JsonConvert.SerializeObject(new BRAND() { BrandName = newBrandName });
                         var data = new StringContent(json, Encoding.UTF8, "application/json");
-                        var idBrand = DTGV.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        var idBrand = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                         string url = GlobalVariable.url + "api/brand/update?id=" + idBrand;
 
                         try
@@ -162,7 +162,7 @@ namespace QLSV
             // delete product
             if (e.ColumnIndex == 14 && isClickProduct)
             {
-                var idProduct = DTGV.Rows[e.RowIndex].Cells[0].Value.ToString();
+                var idProduct = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string url = GlobalVariable.url + "api/product/delete?id=" + idProduct;
                 DialogResult dialogResult = MessageBox.Show("Ban co muon xoa San pham hay khong ?", "Canh Bao", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -202,9 +202,9 @@ namespace QLSV
                 {
                     if (isClick == false)
                     {
-                        DataGridViewCell cell = DTGV.Rows[e.RowIndex].Cells[1];
-                        DTGV.CurrentCell = cell;
-                        DTGV.ReadOnly = false;
+                        DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[1];
+                        dataGridView1.CurrentCell = cell;
+                        dataGridView1.ReadOnly = false;
                         //foreach (DataGridViewRow row in this.DTGV.Rows)
                         //{
                         //    for (int i = 0; i < DTGV.Columns.Count; i++)
@@ -221,20 +221,20 @@ namespace QLSV
                     }
                     else
                     {
-                        var price = DTGV.Rows[e.RowIndex].Cells[3].Value;
+                        var price = dataGridView1.Rows[e.RowIndex].Cells[3].Value;
                         int price1 = Convert.ToInt32(price);
-                        var promotePrice = DTGV.Rows[e.RowIndex].Cells[4].Value;
+                        var promotePrice = dataGridView1.Rows[e.RowIndex].Cells[4].Value;
                         int promotePrice1 = Convert.ToInt32(promotePrice);
-                        PRODUCT newPRODUCT = new PRODUCT() { ProductName = DTGV.Rows[e.RowIndex].Cells[1].Value.ToString(), ProductDescription = DTGV.Rows[e.RowIndex].Cells[2].Value.ToString()
+                        PRODUCT newPRODUCT = new PRODUCT() { ProductName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString(), ProductDescription = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString()
                         , ProductPrice = price1
                         , PromotionPrice = promotePrice1
-                        , ProductURL = DTGV.Rows[e.RowIndex].Cells[6].Value.ToString(), ProductStock = Int32.Parse(DTGV.Rows[e.RowIndex].Cells[7].Value.ToString()), ProductStatus = true
-                        , ProductImage = DTGV.Rows[e.RowIndex].Cells[6].Value.ToString()
+                        , ProductURL = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString(), ProductStock = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString()), ProductStatus = true
+                        , ProductImage = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString()
                         };
                         
                         var json = JsonConvert.SerializeObject(newPRODUCT);
                         var data = new StringContent(json, Encoding.UTF8, "application/json");
-                        var idBrand = DTGV.Rows[e.RowIndex].Cells[0].Value.ToString();
+                        var idBrand = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                         string url = GlobalVariable.url + "api/product/update?id=" + idBrand;
 
                         try
@@ -267,7 +267,7 @@ namespace QLSV
             // delete Customer
             if (e.ColumnIndex == 9 && isClickCustomer)
             {
-                var idCustomer = DTGV.Rows[e.RowIndex].Cells[0].Value.ToString();
+                var idCustomer = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string url = GlobalVariable.url + "api/customer/delete?id=" + idCustomer;
                 DialogResult dialogResult = MessageBox.Show("Ban co muon xoa Customer hay khong ?", "Canh Bao", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
@@ -314,22 +314,22 @@ namespace QLSV
             isClickProduct = false;
 
 
-            DTGV.Columns.Clear();
-            DTGV.DataSource = null;
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
             string url = GlobalVariable.url + "api/brand";
             string json = await new GlobalVariable().GetApiAsync(url);
             var list = JsonConvert.DeserializeObject<List<BRAND>>(json);
-            DTGV.DataSource = list;
-            DTGV.ReadOnly = true;
+            dataGridView1.DataSource = list;
+            dataGridView1.ReadOnly = true;
 
             DataGridViewButtonColumn btn_Sua = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Sua);
+            dataGridView1.Columns.Add(btn_Sua);
             btn_Sua.HeaderText = "Chinh Sua";
             btn_Sua.Text = "Chinh Sua";
             btn_Sua.UseColumnTextForButtonValue = true;
 
             DataGridViewButtonColumn btn_Xoa = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Xoa);
+            dataGridView1.Columns.Add(btn_Xoa);
             btn_Xoa.HeaderText = "Xoa";
             btn_Xoa.Text = "Xoa Brand";
             btn_Xoa.UseColumnTextForButtonValue = true;
@@ -341,22 +341,22 @@ namespace QLSV
             isClickOrder = false;
             isClickProduct =  true;
 
-            DTGV.Columns.Clear();
-            DTGV.DataSource = null;
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
             string url = GlobalVariable.url + "api/product/getall";
             string json = await new GlobalVariable().GetApiAsync(url);
             var list = JsonConvert.DeserializeObject<List<PRODUCT>>(json);
-            DTGV.DataSource = list;
-            DTGV.ReadOnly = true;
+            dataGridView1.DataSource = list;
+            dataGridView1.ReadOnly = true;
 
             DataGridViewButtonColumn btn_Sua = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Sua);
+            dataGridView1.Columns.Add(btn_Sua);
             btn_Sua.HeaderText = "Chinh Sua";
             btn_Sua.Text = "Chinh Sua";
             btn_Sua.UseColumnTextForButtonValue = true;
 
             DataGridViewButtonColumn btn_Xoa = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Xoa);
+            dataGridView1.Columns.Add(btn_Xoa);
             btn_Xoa.HeaderText = "Xoa";
             btn_Xoa.Text = "Xoa san pham";
             btn_Xoa.UseColumnTextForButtonValue = true;
@@ -368,22 +368,22 @@ namespace QLSV
             isClickOrder = false;
             isClickProduct = false;
 
-            DTGV.Columns.Clear();
-            DTGV.DataSource = null;
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
             string url = GlobalVariable.url + "api/customer/getall";
             string json = await new GlobalVariable().GetApiAsync(url);
             var list = JsonConvert.DeserializeObject<List<CUSTOMER>>(json);
-            DTGV.DataSource = list;
-            DTGV.ReadOnly = true;
+            dataGridView1.DataSource = list;
+            dataGridView1.ReadOnly = true;
 
             DataGridViewButtonColumn btn_Sua = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Sua);
+            dataGridView1.Columns.Add(btn_Sua);
             btn_Sua.HeaderText = "Chinh Sua";
             btn_Sua.Text = "Chinh Sua";
             btn_Sua.UseColumnTextForButtonValue = true;
 
             DataGridViewButtonColumn btn_Xoa = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Xoa);
+            dataGridView1.Columns.Add(btn_Xoa);
             btn_Xoa.HeaderText = "Xoa";
             btn_Xoa.Text = "Xoa khach hang";
             btn_Xoa.UseColumnTextForButtonValue = true;
@@ -397,22 +397,22 @@ namespace QLSV
             isClickOrder = true;
             isClickProduct = false;
 
-            DTGV.Columns.Clear();
-            DTGV.DataSource = null;
+            dataGridView1.Columns.Clear();
+            dataGridView1.DataSource = null;
             string url = GlobalVariable.url + "api/customer/getall";
             string json = await new GlobalVariable().GetApiAsync(url);
             var list = JsonConvert.DeserializeObject<List<CUSTOMER>>(json);
-            DTGV.DataSource = list;
-            DTGV.ReadOnly = true;
+            dataGridView1.DataSource = list;
+            dataGridView1.ReadOnly = true;
 
             DataGridViewButtonColumn btn_Sua = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Sua);
+            dataGridView1.Columns.Add(btn_Sua);
             btn_Sua.HeaderText = "Chinh Sua";
             btn_Sua.Text = "Chinh Sua";
             btn_Sua.UseColumnTextForButtonValue = true;
 
             DataGridViewButtonColumn btn_Xoa = new DataGridViewButtonColumn();
-            DTGV.Columns.Add(btn_Xoa);
+            dataGridView1.Columns.Add(btn_Xoa);
             btn_Xoa.HeaderText = "Xoa";
             btn_Xoa.Text = "Xoa khach hang";
             btn_Xoa.UseColumnTextForButtonValue = true;
@@ -430,6 +430,11 @@ namespace QLSV
                 CreateProductForm productFormCreate = new CreateProductForm(this);
                 productFormCreate.Show();
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
