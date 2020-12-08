@@ -36,8 +36,8 @@
             this.AboutForm = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ReportForm = new Bunifu.Framework.UI.BunifuFlatButton();
             this.MenuLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btn_brand = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_product = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_brand = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SideUnderPanel = new System.Windows.Forms.Panel();
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.LabelTextBox = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -66,7 +66,7 @@
             this.UnderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UnderPanel.Location = new System.Drawing.Point(0, 0);
             this.UnderPanel.Name = "UnderPanel";
-            this.UnderPanel.Size = new System.Drawing.Size(1080, 550);
+            this.UnderPanel.Size = new System.Drawing.Size(1409, 707);
             this.UnderPanel.TabIndex = 0;
             // 
             // SidePanel
@@ -75,13 +75,13 @@
             this.SidePanel.Controls.Add(this.AboutForm);
             this.SidePanel.Controls.Add(this.ReportForm);
             this.SidePanel.Controls.Add(this.MenuLabel);
-            this.SidePanel.Controls.Add(this.btn_brand);
             this.SidePanel.Controls.Add(this.btn_product);
+            this.SidePanel.Controls.Add(this.btn_brand);
             this.SidePanel.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.SidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidePanel.Location = new System.Drawing.Point(0, 43);
+            this.SidePanel.Location = new System.Drawing.Point(0, 41);
             this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(200, 507);
+            this.SidePanel.Size = new System.Drawing.Size(200, 666);
             this.SidePanel.TabIndex = 1;
             this.SidePanel.UseWaitCursor = true;
             // 
@@ -168,42 +168,6 @@
             this.MenuLabel.Text = "Menu";
             this.MenuLabel.UseWaitCursor = true;
             // 
-            // btn_brand
-            // 
-            this.btn_brand.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.btn_brand.BackColor = System.Drawing.Color.Transparent;
-            this.btn_brand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_brand.BorderRadius = 0;
-            this.btn_brand.ButtonText = "Brand";
-            this.btn_brand.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.btn_brand.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_brand.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_brand.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_brand.Iconimage")));
-            this.btn_brand.Iconimage_right = null;
-            this.btn_brand.Iconimage_right_Selected = null;
-            this.btn_brand.Iconimage_Selected = null;
-            this.btn_brand.IconMarginLeft = 10;
-            this.btn_brand.IconMarginRight = 0;
-            this.btn_brand.IconRightVisible = true;
-            this.btn_brand.IconRightZoom = 0D;
-            this.btn_brand.IconVisible = true;
-            this.btn_brand.IconZoom = 50D;
-            this.btn_brand.IsTab = true;
-            this.btn_brand.Location = new System.Drawing.Point(0, 137);
-            this.btn_brand.Name = "btn_brand";
-            this.btn_brand.Normalcolor = System.Drawing.Color.Transparent;
-            this.btn_brand.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(67)))));
-            this.btn_brand.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_brand.selected = false;
-            this.btn_brand.Size = new System.Drawing.Size(200, 110);
-            this.btn_brand.TabIndex = 1;
-            this.btn_brand.Text = "Brand";
-            this.btn_brand.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_brand.Textcolor = System.Drawing.Color.White;
-            this.btn_brand.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_brand.UseWaitCursor = true;
-            this.btn_brand.Click += new System.EventHandler(this.ScoreForm_Click);
-            // 
             // btn_product
             // 
             this.btn_product.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
@@ -225,27 +189,63 @@
             this.btn_product.IconVisible = true;
             this.btn_product.IconZoom = 50D;
             this.btn_product.IsTab = true;
-            this.btn_product.Location = new System.Drawing.Point(0, 25);
+            this.btn_product.Location = new System.Drawing.Point(0, 137);
             this.btn_product.Name = "btn_product";
             this.btn_product.Normalcolor = System.Drawing.Color.Transparent;
             this.btn_product.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(67)))));
             this.btn_product.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_product.selected = false;
-            this.btn_product.Size = new System.Drawing.Size(203, 125);
-            this.btn_product.TabIndex = 0;
+            this.btn_product.Size = new System.Drawing.Size(200, 110);
+            this.btn_product.TabIndex = 1;
             this.btn_product.Text = "Product";
             this.btn_product.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_product.Textcolor = System.Drawing.Color.White;
             this.btn_product.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_product.UseWaitCursor = true;
-            this.btn_product.Click += new System.EventHandler(this.AddForm_Click);
+            this.btn_product.Click += new System.EventHandler(this.ScoreForm_Click);
+            // 
+            // btn_brand
+            // 
+            this.btn_brand.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
+            this.btn_brand.BackColor = System.Drawing.Color.Transparent;
+            this.btn_brand.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_brand.BorderRadius = 0;
+            this.btn_brand.ButtonText = "Brand";
+            this.btn_brand.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btn_brand.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_brand.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_brand.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_brand.Iconimage")));
+            this.btn_brand.Iconimage_right = null;
+            this.btn_brand.Iconimage_right_Selected = null;
+            this.btn_brand.Iconimage_Selected = null;
+            this.btn_brand.IconMarginLeft = 10;
+            this.btn_brand.IconMarginRight = 0;
+            this.btn_brand.IconRightVisible = true;
+            this.btn_brand.IconRightZoom = 0D;
+            this.btn_brand.IconVisible = true;
+            this.btn_brand.IconZoom = 50D;
+            this.btn_brand.IsTab = true;
+            this.btn_brand.Location = new System.Drawing.Point(0, 25);
+            this.btn_brand.Name = "btn_brand";
+            this.btn_brand.Normalcolor = System.Drawing.Color.Transparent;
+            this.btn_brand.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(67)))));
+            this.btn_brand.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_brand.selected = false;
+            this.btn_brand.Size = new System.Drawing.Size(203, 125);
+            this.btn_brand.TabIndex = 0;
+            this.btn_brand.Text = "Brand";
+            this.btn_brand.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_brand.Textcolor = System.Drawing.Color.White;
+            this.btn_brand.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_brand.UseWaitCursor = true;
+            this.btn_brand.Click += new System.EventHandler(this.AddForm_Click);
             // 
             // SideUnderPanel
             // 
             this.SideUnderPanel.BackColor = System.Drawing.Color.Transparent;
             this.SideUnderPanel.Location = new System.Drawing.Point(55, 44);
             this.SideUnderPanel.Name = "SideUnderPanel";
-            this.SideUnderPanel.Size = new System.Drawing.Size(1020, 503);
+            this.SideUnderPanel.Size = new System.Drawing.Size(1351, 660);
             this.SideUnderPanel.TabIndex = 2;
             // 
             // HeaderPanel
@@ -258,7 +258,7 @@
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1080, 43);
+            this.HeaderPanel.Size = new System.Drawing.Size(1409, 41);
             this.HeaderPanel.TabIndex = 0;
             // 
             // LabelTextBox
@@ -284,7 +284,7 @@
             this.MinimizedBtn.BackColor = System.Drawing.Color.Transparent;
             this.MinimizedBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizedBtn.Image")));
             this.MinimizedBtn.ImageActive = null;
-            this.MinimizedBtn.Location = new System.Drawing.Point(992, 10);
+            this.MinimizedBtn.Location = new System.Drawing.Point(1331, 8);
             this.MinimizedBtn.Name = "MinimizedBtn";
             this.MinimizedBtn.Size = new System.Drawing.Size(30, 30);
             this.MinimizedBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -298,7 +298,7 @@
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
             this.ExitBtn.ImageActive = null;
-            this.ExitBtn.Location = new System.Drawing.Point(1028, 10);
+            this.ExitBtn.Location = new System.Drawing.Point(1367, 8);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(30, 30);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -324,7 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 550);
+            this.ClientSize = new System.Drawing.Size(1409, 707);
             this.Controls.Add(this.UnderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -349,9 +349,9 @@
         private Bunifu.Framework.UI.BunifuImageButton ExitBtn;
         private Bunifu.Framework.UI.BunifuImageButton MinimizedBtn;
         private System.Windows.Forms.Panel SidePanel;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_product;
-        private System.Windows.Forms.Timer SideAnimation;
         private Bunifu.Framework.UI.BunifuFlatButton btn_brand;
+        private System.Windows.Forms.Timer SideAnimation;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_product;
         private Bunifu.Framework.UI.BunifuCustomLabel MenuLabel;
         private Bunifu.Framework.UI.BunifuFlatButton AboutForm;
         private Bunifu.Framework.UI.BunifuFlatButton ReportForm;

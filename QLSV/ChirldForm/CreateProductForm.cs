@@ -20,8 +20,8 @@ namespace QLSV.ChirldForm
         {
             InitializeComponent();
         }
-        public Add_Frm mainForm { get; set; }
-        public CreateProductForm(Add_Frm add_Frm)
+        public Brand_Frm mainForm { get; set; }
+        public CreateProductForm(Brand_Frm add_Frm)
         {
             InitializeComponent();
             this.mainForm = add_Frm;
@@ -62,7 +62,7 @@ namespace QLSV.ChirldForm
                 if (response.IsSuccessStatusCode)
                 {
                     // Succes
-                    mainForm.DTGV_Layout_product();
+                    //mainForm.DTGV_Layout_product();
                     MessageBox.Show("Tao sản phẩm thành công");
                 }
                 else

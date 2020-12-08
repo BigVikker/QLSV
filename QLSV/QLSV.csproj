@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\C++\VS\QLSV\QLSV\Bunifu_UI_v1.52.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Workplace\C#\DLLs\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -57,11 +57,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Frm.cs">
+    <Compile Include="Brand_Frm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Add_Frm.Designer.cs">
-      <DependentUpon>Add_Frm.cs</DependentUpon>
+    <Compile Include="Brand_Frm.Designer.cs">
+      <DependentUpon>Brand_Frm.cs</DependentUpon>
     </Compile>
     <Compile Include="ChirldForm\CreateBrandForm.cs">
       <SubType>Form</SubType>
@@ -94,8 +94,8 @@
     <Compile Include="Models\PRODUCT.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add_Frm.resx">
-      <DependentUpon>Add_Frm.cs</DependentUpon>
+    <EmbeddedResource Include="Brand_Frm.resx">
+      <DependentUpon>Brand_Frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChirldForm\CreateBrandForm.resx">
       <DependentUpon>CreateBrandForm.cs</DependentUpon>

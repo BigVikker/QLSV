@@ -16,16 +16,13 @@ namespace QLSV.ChirldForm
 {
     public partial class CreateBrandForm : Form
     {
-        public CreateBrandForm(Add_Frm add_Frm)
+        public CreateBrandForm(Brand_Frm add_Frm)
         {
             InitializeComponent();
             this.mainForm = add_Frm;
             
         }
-        public Add_Frm mainForm { get; set; }
-
-
-
+        public Brand_Frm mainForm { get; set; }
 
         private async void button_submit_Click(object sender, EventArgs e)
         {
@@ -42,7 +39,7 @@ namespace QLSV.ChirldForm
                     if (response.IsSuccessStatusCode)
                     {
                         MessageBox.Show("Succes");
-                        mainForm.DTGV_Layout_Brand();
+                        //mainForm.DTGV_Layout_Brand();
 
                     }
                     else

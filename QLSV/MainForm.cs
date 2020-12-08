@@ -12,7 +12,6 @@ namespace QLSV
 {
     public partial class MainForm : Form
     {
-        public event EventHandler ToggleTheme;
 
         public MainForm()
         {
@@ -50,62 +49,62 @@ namespace QLSV
 
         private void AddForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(Add_Frm.Instance))
+            if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
             {
-                SideUnderPanel.Controls.Add(Add_Frm.Instance);
-                Add_Frm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(Brand_Frm.Instance);
+                Brand_Frm.Instance.BringToFront();
             }
             else
             {
-                Add_Frm.Instance.BringToFront();
+                Brand_Frm.Instance.BringToFront();
             }
-            Add_Frm.Instance.DTGV_Layout_product();
-            LabelTextBox.Text = "Quản lý sản phẩm";
+            //Add_Frm.Instance.DTGV_Layout_product();
+            //LabelTextBox.Text = "Quản lý sản phẩm";
         }
 
         private void ScoreForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(Add_Frm.Instance))
+            if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
             {
-                SideUnderPanel.Controls.Add(Add_Frm.Instance);
-                Add_Frm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(Brand_Frm.Instance);
+                Brand_Frm.Instance.BringToFront();
             }
             else
             {
-                Add_Frm.Instance.BringToFront();
+                Brand_Frm.Instance.BringToFront();
             }
-            Add_Frm.Instance.DTGV_Layout_Brand();
-            LabelTextBox.Text = "Quản lý Brand";
+            //Add_Frm.Instance.DTGV_Layout_Brand();
+            //LabelTextBox.Text = "Quản lý Brand";
         }
 
         private void ReportForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(Add_Frm.Instance))
+            if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
             {
-                SideUnderPanel.Controls.Add(Add_Frm.Instance);
-                Add_Frm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(Brand_Frm.Instance);
+                Brand_Frm.Instance.BringToFront();
             }
             else
             {
-                Add_Frm.Instance.BringToFront();
+                Brand_Frm.Instance.BringToFront();
             }
-            Add_Frm.Instance.DTGV_Layout_customer();
-            LabelTextBox.Text = "Quản lý khách hàng";
+            //Add_Frm.Instance.DTGV_Layout_customer();
+            //LabelTextBox.Text = "Quản lý khách hàng";
         }
 
         private void AboutForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(Add_Frm.Instance))
+            if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
             {
-                SideUnderPanel.Controls.Add(Add_Frm.Instance);
-                Add_Frm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(Brand_Frm.Instance);
+                Brand_Frm.Instance.BringToFront();
             }
             else
             {
-                Add_Frm.Instance.BringToFront();
+                Brand_Frm.Instance.BringToFront();
             }
-            Add_Frm.Instance.DTGV_Layout_order();
-            LabelTextBox.Text = "Quản lý đặt hàng";
+            //Add_Frm.Instance.DTGV_Layout_order();
+            //LabelTextBox.Text = "Quản lý đặt hàng";
         }
 
     }
