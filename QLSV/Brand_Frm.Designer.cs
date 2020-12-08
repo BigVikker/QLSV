@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RoundCorner = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.brand_dtgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -46,7 +46,8 @@
             this.brandurl_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.branddate_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.brandedit_btn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.deletebrand_btn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.loading_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brand_dtgv)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.loading_lbl);
             this.groupBox2.Controls.Add(this.brand_dtgv);
             this.groupBox2.Location = new System.Drawing.Point(161, 228);
             this.groupBox2.Name = "groupBox2";
@@ -67,19 +69,19 @@
             // 
             // brand_dtgv
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.brand_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.brand_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.brand_dtgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.brand_dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.brand_dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.brand_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.brand_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.brand_dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.brand_dtgv.DoubleBuffered = true;
             this.brand_dtgv.EnableHeadersVisualStyles = false;
@@ -289,47 +291,61 @@
             this.brandedit_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.brandedit_btn.Textcolor = System.Drawing.Color.White;
             this.brandedit_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brandedit_btn.Click += new System.EventHandler(this.brandedit_btn_Click);
             // 
-            // bunifuFlatButton1
+            // deletebrand_btn
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Maroon;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Delete";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(859, 509);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(146, 44);
-            this.bunifuFlatButton1.TabIndex = 18;
-            this.bunifuFlatButton1.Text = "Delete";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletebrand_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.deletebrand_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.deletebrand_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.deletebrand_btn.BorderRadius = 0;
+            this.deletebrand_btn.ButtonText = "Delete";
+            this.deletebrand_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deletebrand_btn.DisabledColor = System.Drawing.Color.Gray;
+            this.deletebrand_btn.Iconcolor = System.Drawing.Color.Transparent;
+            this.deletebrand_btn.Iconimage = null;
+            this.deletebrand_btn.Iconimage_right = null;
+            this.deletebrand_btn.Iconimage_right_Selected = null;
+            this.deletebrand_btn.Iconimage_Selected = null;
+            this.deletebrand_btn.IconMarginLeft = 0;
+            this.deletebrand_btn.IconMarginRight = 0;
+            this.deletebrand_btn.IconRightVisible = true;
+            this.deletebrand_btn.IconRightZoom = 0D;
+            this.deletebrand_btn.IconVisible = true;
+            this.deletebrand_btn.IconZoom = 90D;
+            this.deletebrand_btn.IsTab = false;
+            this.deletebrand_btn.Location = new System.Drawing.Point(859, 509);
+            this.deletebrand_btn.Name = "deletebrand_btn";
+            this.deletebrand_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.deletebrand_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.deletebrand_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.deletebrand_btn.selected = false;
+            this.deletebrand_btn.Size = new System.Drawing.Size(146, 44);
+            this.deletebrand_btn.TabIndex = 18;
+            this.deletebrand_btn.Text = "Delete";
+            this.deletebrand_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.deletebrand_btn.Textcolor = System.Drawing.Color.White;
+            this.deletebrand_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletebrand_btn.Click += new System.EventHandler(this.deletebrand_btn_Click);
+            // 
+            // loading_lbl
+            // 
+            this.loading_lbl.AutoSize = true;
+            this.loading_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loading_lbl.ForeColor = System.Drawing.Color.White;
+            this.loading_lbl.Location = new System.Drawing.Point(204, 158);
+            this.loading_lbl.Name = "loading_lbl";
+            this.loading_lbl.Size = new System.Drawing.Size(78, 20);
+            this.loading_lbl.TabIndex = 19;
+            this.loading_lbl.Text = "Loading...";
+            this.loading_lbl.Visible = false;
             // 
             // Brand_Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.deletebrand_btn);
             this.Controls.Add(this.brandedit_btn);
             this.Controls.Add(this.branddate_lbl);
             this.Controls.Add(this.brandurl_lbl);
@@ -346,6 +362,7 @@
             this.Name = "Brand_Frm";
             this.Size = new System.Drawing.Size(1265, 639);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brand_dtgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -369,6 +386,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel branddate_lbl;
         private Bunifu.Framework.UI.BunifuCustomLabel brandurl_lbl;
         private Bunifu.Framework.UI.BunifuFlatButton brandedit_btn;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton deletebrand_btn;
+        private Bunifu.Framework.UI.BunifuCustomLabel loading_lbl;
     }
 }

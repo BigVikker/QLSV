@@ -36,23 +36,63 @@ namespace QLSV
 
         public async void Load_List()
         {
+            //brand_dtgv.Columns.Add("Col1", "Status");
+            //brand_dtgv.Rows.Add("Loading...");
+            loading_lbl.Visible = true;
             try
             {
                 string url = GlobalVariable.url + "api/brand";
                 string json = await new GlobalVariable().GetApiAsync(url);
                 var list = JsonConvert.DeserializeObject<List<BRAND>>(json);
-
+                brand_dtgv.DataSource = null;
                 brand_dtgv.DataSource = list;
+                loading_lbl.Visible = false;
             }
             catch
             {
                 MessageBox.Show("Cannot get data", "Fail");
+                brand_dtgv.DataSource = null;
+                loading_lbl.Visible = false;
             }
         }
 
-        private void createBrand_btn_Click(object sender, EventArgs e)
+        private async void createBrand_btn_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(brand_txtbox.Text))
+            {
+                createBrand_btn.Enabled = false;
+                var json = JsonConvert.SerializeObject(new BRAND()
+                {
+                    BrandName = brand_txtbox.Text
+                });
+                var data = new StringContent(json, Encoding.UTF8, "application/json");
 
+                string url = GlobalVariable.url + "api/brand/create";
+
+                try
+                {
+                    var client = new HttpClient();
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
+                    client.BaseAddress = new Uri(url);
+
+                    var response = await client.PostAsync(url, data);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Create Success", "Success");
+                        Load_List();
+                    }
+                    else
+                    {
+                        MessageBox.Show(await response.Content.ReadAsStringAsync(), "Fail");
+                    }
+                    createBrand_btn.Enabled = true;
+                }
+                catch
+                {
+                    MessageBox.Show("Error while creating brand", "Fail");
+                    createBrand_btn.Enabled = true;
+                }
+            }
         }
 
         private void brand_dtgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -71,9 +111,74 @@ namespace QLSV
         {
             if (brandname_txtbox.Text != brandtxt_temp)
                 brandedit_btn.Enabled = true;
-             else
+            else
                 brandedit_btn.Enabled = false;
-            
+
+        }
+
+        private async void brandedit_btn_Click(object sender, EventArgs e)
+        {
+            brandedit_btn.Enabled = false;
+               var json = JsonConvert.SerializeObject(new BRAND()
+            {
+                BrandName = brandname_txtbox.Text
+            });
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            string url = GlobalVariable.url + "api/brand/update?id=" + brandid_lbl.Text;
+
+            try
+            {
+                var client = new HttpClient();
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
+                client.BaseAddress = new Uri(url);
+
+                var response = await client.PutAsync(url, data);
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Update Success", "Success");
+                    Load_List();
+                }
+                else
+                {
+                    MessageBox.Show(await response.Content.ReadAsStringAsync(), "Fail");
+                }
+                brandedit_btn.Enabled = true;
+            }
+            catch
+            {
+                MessageBox.Show("Error while updating brand", "Fail"); 
+                brandedit_btn.Enabled = true;
+            }
+        }
+
+        private async void deletebrand_btn_Click(object sender, EventArgs e)
+        {
+            deletebrand_btn.Enabled = false;
+            string url = GlobalVariable.url + "api/brand/delete?id=" + brandid_lbl.Text;
+
+            try
+            {
+                var client = new HttpClient();
+                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
+                client.BaseAddress = new Uri(url);
+
+                var response = await client.DeleteAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Delete Success", "Success");
+                    Load_List();
+                }
+                else
+                {
+                    MessageBox.Show(await response.Content.ReadAsStringAsync(), "Fail");
+                }
+                deletebrand_btn.Enabled = true;
+            }
+            catch
+            {
+                MessageBox.Show("Error while deleting brand", "Fail");
+                deletebrand_btn.Enabled = true;
+            }
         }
 
         //public bool isClickProduct { get; set; }
