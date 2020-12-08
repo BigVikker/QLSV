@@ -88,7 +88,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 186);
+            this.ClientSize = new System.Drawing.Size(540, 197);
             this.Controls.Add(this.textBox_pass);
             this.Controls.Add(this.textBox_userName);
             this.Controls.Add(this.button_submit);

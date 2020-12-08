@@ -35,7 +35,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.brand_dtgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label_ThongBao = new System.Windows.Forms.Label();
-            this.brand_txtbox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.createBrand_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -48,6 +47,8 @@
             this.brandedit_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.deletebrand_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.loading_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.brand_txtbox = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brand_dtgv)).BeginInit();
             this.SuspendLayout();
@@ -105,25 +106,6 @@
             this.label_ThongBao.TabIndex = 4;
             this.label_ThongBao.Text = "Phần mềm quản lý shop điện thoại";
             // 
-            // brand_txtbox
-            // 
-            this.brand_txtbox.BackColor = System.Drawing.Color.White;
-            this.brand_txtbox.BorderColorFocused = System.Drawing.Color.Lime;
-            this.brand_txtbox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.brand_txtbox.BorderColorMouseHover = System.Drawing.Color.LimeGreen;
-            this.brand_txtbox.BorderThickness = 3;
-            this.brand_txtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.brand_txtbox.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.brand_txtbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.brand_txtbox.isPassword = false;
-            this.brand_txtbox.Location = new System.Drawing.Point(167, 98);
-            this.brand_txtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.brand_txtbox.Name = "brand_txtbox";
-            this.brand_txtbox.Size = new System.Drawing.Size(276, 44);
-            this.brand_txtbox.TabIndex = 5;
-            this.brand_txtbox.Text = "Brand Name";
-            this.brand_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // createBrand_btn
             // 
             this.createBrand_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -145,7 +127,7 @@
             this.createBrand_btn.IconVisible = true;
             this.createBrand_btn.IconZoom = 90D;
             this.createBrand_btn.IsTab = false;
-            this.createBrand_btn.Location = new System.Drawing.Point(483, 98);
+            this.createBrand_btn.Location = new System.Drawing.Point(517, 98);
             this.createBrand_btn.Name = "createBrand_btn";
             this.createBrand_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.createBrand_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -197,8 +179,8 @@
             this.brandname_txtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.brandname_txtbox.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.brandname_txtbox.ForeColor = System.Drawing.Color.White;
-            this.brandname_txtbox.HintForeColor = System.Drawing.Color.Empty;
-            this.brandname_txtbox.HintText = "";
+            this.brandname_txtbox.HintForeColor = System.Drawing.Color.White;
+            this.brandname_txtbox.HintText = "brand name";
             this.brandname_txtbox.isPassword = false;
             this.brandname_txtbox.LineFocusedColor = System.Drawing.Color.Lime;
             this.brandname_txtbox.LineIdleColor = System.Drawing.Color.Gray;
@@ -209,7 +191,6 @@
             this.brandname_txtbox.Name = "brandname_txtbox";
             this.brandname_txtbox.Size = new System.Drawing.Size(171, 33);
             this.brandname_txtbox.TabIndex = 12;
-            this.brandname_txtbox.Text = "Brand Name";
             this.brandname_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.brandname_txtbox.OnValueChanged += new System.EventHandler(this.brandname_txtbox_OnValueChanged);
             // 
@@ -340,11 +321,43 @@
             this.loading_lbl.Text = "Loading...";
             this.loading_lbl.Visible = false;
             // 
+            // brand_txtbox
+            // 
+            this.brand_txtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.brand_txtbox.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.brand_txtbox.ForeColor = System.Drawing.Color.White;
+            this.brand_txtbox.HintForeColor = System.Drawing.Color.White;
+            this.brand_txtbox.HintText = "Brand Name";
+            this.brand_txtbox.isPassword = false;
+            this.brand_txtbox.LineFocusedColor = System.Drawing.Color.Lime;
+            this.brand_txtbox.LineIdleColor = System.Drawing.Color.Gray;
+            this.brand_txtbox.LineMouseHoverColor = System.Drawing.Color.Lime;
+            this.brand_txtbox.LineThickness = 4;
+            this.brand_txtbox.Location = new System.Drawing.Point(284, 98);
+            this.brand_txtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.brand_txtbox.Name = "brand_txtbox";
+            this.brand_txtbox.Size = new System.Drawing.Size(212, 33);
+            this.brand_txtbox.TabIndex = 19;
+            this.brand_txtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(163, 111);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(96, 20);
+            this.bunifuCustomLabel2.TabIndex = 20;
+            this.bunifuCustomLabel2.Text = "Create New:";
+            // 
             // Brand_Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.brand_txtbox);
             this.Controls.Add(this.deletebrand_btn);
             this.Controls.Add(this.brandedit_btn);
             this.Controls.Add(this.branddate_lbl);
@@ -356,7 +369,6 @@
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.createBrand_btn);
-            this.Controls.Add(this.brand_txtbox);
             this.Controls.Add(this.label_ThongBao);
             this.Controls.Add(this.groupBox2);
             this.Name = "Brand_Frm";
@@ -375,7 +387,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label_ThongBao;
         private Bunifu.Framework.UI.BunifuFlatButton createBrand_btn;
-        private Bunifu.Framework.UI.BunifuMetroTextbox brand_txtbox;
         private Bunifu.Framework.UI.BunifuCustomDataGrid brand_dtgv;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox brandname_txtbox;
@@ -388,5 +399,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton brandedit_btn;
         private Bunifu.Framework.UI.BunifuFlatButton deletebrand_btn;
         private Bunifu.Framework.UI.BunifuCustomLabel loading_lbl;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox brand_txtbox;
     }
 }

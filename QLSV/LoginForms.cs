@@ -22,6 +22,7 @@ namespace QLSV
         private async void button_submit_Click(object sender, EventArgs e)
         {
             button_submit.Enabled = false;
+            button_submit.Text = "Signin in...";
             string url = GlobalVariable.url + "api/token";
             //MainForm mainForm = new MainForm();
             //mainForm.Show();
@@ -43,10 +44,13 @@ namespace QLSV
                     mainForm1.Show();
                     this.Hide();
                 }
+                else
+                {
+                    MessageBox.Show("Login fail", "Fail");
+                }
             }
             
-            textBox_userName.Text = "";
-            textBox_pass.Text = "";
+            button_submit.Text = "Đăng nhập";
             button_submit.Enabled = true;
         }
     }
