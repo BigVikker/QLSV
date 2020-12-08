@@ -20,11 +20,12 @@ namespace QLSV.ChirldForm
         {
             InitializeComponent();
         }
-        public Brand_Frm mainForm { get; set; }
-        public CreateProductForm(Brand_Frm add_Frm)
+        public ProductForm mainForm { get; set; }
+        public CreateProductForm(ProductForm add_Frm)
         {
             InitializeComponent();
             this.mainForm = add_Frm;
+            this.mainForm.Enabled = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -112,6 +113,11 @@ namespace QLSV.ChirldForm
 
         private void textBox_stock_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void CreateProductForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.mainForm.Enabled = true;
         }
     }
 }

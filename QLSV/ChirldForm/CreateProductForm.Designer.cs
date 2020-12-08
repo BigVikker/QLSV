@@ -263,6 +263,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CreateProductForm";
             this.Text = "CreateProductForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateProductForm_FormClosing);
             this.Load += new System.EventHandler(this.CreateProductForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

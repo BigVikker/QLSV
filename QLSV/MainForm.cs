@@ -64,14 +64,14 @@ namespace QLSV
 
         private void ScoreForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
+            if (!SideUnderPanel.Controls.Contains(ProductForm.Instance))
             {
-                SideUnderPanel.Controls.Add(Brand_Frm.Instance);
-                Brand_Frm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(ProductForm.Instance);
+                ProductForm.Instance.BringToFront();
             }
             else
             {
-                Brand_Frm.Instance.BringToFront();
+                ProductForm.Instance.BringToFront();
             }
             //Add_Frm.Instance.DTGV_Layout_Brand();
             //LabelTextBox.Text = "Quản lý Brand";

@@ -66,7 +66,7 @@
             this.UnderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UnderPanel.Location = new System.Drawing.Point(0, 0);
             this.UnderPanel.Name = "UnderPanel";
-            this.UnderPanel.Size = new System.Drawing.Size(1409, 707);
+            this.UnderPanel.Size = new System.Drawing.Size(1386, 707);
             this.UnderPanel.TabIndex = 0;
             // 
             // SidePanel
@@ -258,7 +258,7 @@
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Name = "HeaderPanel";
-            this.HeaderPanel.Size = new System.Drawing.Size(1409, 41);
+            this.HeaderPanel.Size = new System.Drawing.Size(1386, 41);
             this.HeaderPanel.TabIndex = 0;
             // 
             // LabelTextBox
@@ -324,7 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1409, 707);
+            this.ClientSize = new System.Drawing.Size(1386, 707);
             this.Controls.Add(this.UnderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";

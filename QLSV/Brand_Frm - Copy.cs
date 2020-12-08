@@ -103,6 +103,8 @@ namespace QLSV
             brandname_txtbox.Text = brand_dtgv.Rows[rowIndex].Cells[1].Value.ToString();
             brandurl_lbl.Text = brand_dtgv.Rows[rowIndex].Cells[2].Value.ToString();
             branddate_lbl.Text = brand_dtgv.Rows[rowIndex].Cells[3].Value.ToString();
+
+
         }
 
         private void brandname_txtbox_OnValueChanged(object sender, EventArgs e)
@@ -177,11 +179,6 @@ namespace QLSV
                 MessageBox.Show("Error while deleting brand", "Fail");
                 deletebrand_btn.Enabled = true;
             }
-        }
-
-        private void brand_dtgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         //public bool isClickProduct { get; set; }
