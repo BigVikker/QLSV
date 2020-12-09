@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.deleteProduct_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.productEdit_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -52,6 +52,8 @@
             this.txtBox_Stock = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.checkBox_status = new System.Windows.Forms.CheckBox();
             this.createProduct_btn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtBox_findByID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btn_Find = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product_dtgv)).BeginInit();
             this.SuspendLayout();
@@ -151,19 +153,19 @@
             // 
             // product_dtgv
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.product_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.product_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.product_dtgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.product_dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.product_dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.product_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.product_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.product_dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.product_dtgv.DoubleBuffered = true;
             this.product_dtgv.EnableHeadersVisualStyles = false;
@@ -335,6 +337,7 @@
             this.txtBox_Price.TabIndex = 35;
             this.txtBox_Price.Text = "0";
             this.txtBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
             // 
             // txtBox_PromoPrice
             // 
@@ -342,7 +345,7 @@
             this.txtBox_PromoPrice.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.txtBox_PromoPrice.ForeColor = System.Drawing.Color.White;
             this.txtBox_PromoPrice.HintForeColor = System.Drawing.Color.White;
-            this.txtBox_PromoPrice.HintText = "ProductName";
+            this.txtBox_PromoPrice.HintText = "0";
             this.txtBox_PromoPrice.isPassword = false;
             this.txtBox_PromoPrice.LineFocusedColor = System.Drawing.Color.Lime;
             this.txtBox_PromoPrice.LineIdleColor = System.Drawing.Color.Gray;
@@ -353,8 +356,8 @@
             this.txtBox_PromoPrice.Name = "txtBox_PromoPrice";
             this.txtBox_PromoPrice.Size = new System.Drawing.Size(171, 33);
             this.txtBox_PromoPrice.TabIndex = 36;
-            this.txtBox_PromoPrice.Text = "0";
             this.txtBox_PromoPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox_PromoPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
             // 
             // txtBox_Img
             // 
@@ -395,6 +398,7 @@
             this.txtBox_Stock.TabIndex = 38;
             this.txtBox_Stock.Text = "0";
             this.txtBox_Stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox_Stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
             // 
             // checkBox_status
             // 
@@ -443,11 +447,68 @@
             this.createProduct_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createProduct_btn.Click += new System.EventHandler(this.createProduct_btn_Click);
             // 
+            // txtBox_findByID
+            // 
+            this.txtBox_findByID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBox_findByID.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.txtBox_findByID.ForeColor = System.Drawing.Color.White;
+            this.txtBox_findByID.HintForeColor = System.Drawing.Color.White;
+            this.txtBox_findByID.HintText = "Find by ID";
+            this.txtBox_findByID.isPassword = false;
+            this.txtBox_findByID.LineFocusedColor = System.Drawing.Color.Lime;
+            this.txtBox_findByID.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBox_findByID.LineMouseHoverColor = System.Drawing.Color.Lime;
+            this.txtBox_findByID.LineThickness = 4;
+            this.txtBox_findByID.Location = new System.Drawing.Point(166, 109);
+            this.txtBox_findByID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBox_findByID.Name = "txtBox_findByID";
+            this.txtBox_findByID.Size = new System.Drawing.Size(409, 44);
+            this.txtBox_findByID.TabIndex = 41;
+            this.txtBox_findByID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox_findByID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyNumber_KeyPress);
+            // 
+            // btn_Find
+            // 
+            this.btn_Find.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Find.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Find.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Find.BorderRadius = 0;
+            this.btn_Find.ButtonText = "Find by ID";
+            this.btn_Find.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Find.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Find.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Find.Iconimage = null;
+            this.btn_Find.Iconimage_right = null;
+            this.btn_Find.Iconimage_right_Selected = null;
+            this.btn_Find.Iconimage_Selected = null;
+            this.btn_Find.IconMarginLeft = 0;
+            this.btn_Find.IconMarginRight = 0;
+            this.btn_Find.IconRightVisible = true;
+            this.btn_Find.IconRightZoom = 0D;
+            this.btn_Find.IconVisible = true;
+            this.btn_Find.IconZoom = 90D;
+            this.btn_Find.IsTab = false;
+            this.btn_Find.Location = new System.Drawing.Point(582, 109);
+            this.btn_Find.Name = "btn_Find";
+            this.btn_Find.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_Find.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_Find.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Find.selected = false;
+            this.btn_Find.Size = new System.Drawing.Size(146, 44);
+            this.btn_Find.TabIndex = 42;
+            this.btn_Find.Text = "Find by ID";
+            this.btn_Find.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Find.Textcolor = System.Drawing.Color.White;
+            this.btn_Find.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Find.Click += new System.EventHandler(this.btn_Find_ClickAsync);
+            // 
             // Product_Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.Controls.Add(this.btn_Find);
+            this.Controls.Add(this.txtBox_findByID);
             this.Controls.Add(this.checkBox_status);
             this.Controls.Add(this.txtBox_Stock);
             this.Controls.Add(this.txtBox_Img);
@@ -502,5 +563,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBox_Stock;
         private System.Windows.Forms.CheckBox checkBox_status;
         private Bunifu.Framework.UI.BunifuFlatButton createProduct_btn;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtBox_findByID;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Find;
     }
 }

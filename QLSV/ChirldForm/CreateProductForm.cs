@@ -117,6 +117,7 @@ namespace QLSV.ChirldForm
 
         private void CreateProductForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this.mainForm.Load_List();
             this.mainForm.Enabled = true;
         }
     }

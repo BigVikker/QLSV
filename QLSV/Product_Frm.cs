@@ -12,6 +12,7 @@ using QLSV.Models;
 using Newtonsoft.Json;
 using System.Net.Http;
 using QLSV.ChirldForm;
+using System.Text.RegularExpressions;
 
 namespace QLSV
 {
@@ -83,14 +84,6 @@ namespace QLSV
             txtBox_Price.Text = Convert.ToDecimal(price).ToString("#,##0") + "đ";
             var promo = product_dtgv.Rows[rowIndex].Cells[4].Value;
             txtBox_PromoPrice.Text = (promo == null) ? "0đ" : Convert.ToDecimal(promo).ToString("#,##0") + "đ";
-
-            //try {
-            //    txtBox_PromoPrice.Text = product_dtgv.Rows[rowIndex].Cells[4].Value.ToString();
-            //}
-            //catch
-            //{
-            //    txtBox_PromoPrice.Text = "0";
-            //}
             txtBox_Stock.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
             txtBox_Img.Text = product_dtgv.Rows[rowIndex].Cells[6].Value.ToString();
             if (product_dtgv.Rows[rowIndex].Cells[10].Value.ToString() == "True")
@@ -103,57 +96,76 @@ namespace QLSV
         private async void deleteProduct_btn_Click(object sender, EventArgs e)
         {
             deleteProduct_btn.Enabled = false;
-            if (productID_lbl.Text == null || productID_lbl.Text.ToString() == "ID") {
-                deleteProduct_btn.Enabled = true;
-                return;
-            }
-            string url = GlobalVariable.url + "api/product/delete?id=" + productID_lbl.Text;
-            try
-            {
-                var client = new HttpClient();
-                //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
-                client.BaseAddress = new Uri(url);
+            DialogResult dialogResult = MessageBox.Show("Do you want to delete this product ?", "Warnning", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes) {
+                if (productID_lbl.Text == null || productID_lbl.Text.ToString() == "ID")
+                {
+                    deleteProduct_btn.Enabled = true;
+                    return;
+                }
+                string url = GlobalVariable.url + "api/product/delete?id=" + productID_lbl.Text;
+                try
+                {
+                    var client = new HttpClient();
+                    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
+                    client.BaseAddress = new Uri(url);
 
-                var response = await client.DeleteAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    MessageBox.Show("Delete Success", "Success");
-                    Load_List();
+                    var response = await client.DeleteAsync(url);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Delete Success", "Success");
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show(await response.Content.ReadAsStringAsync(), "Fail");
+                    }
+                    deleteProduct_btn.Enabled = true;
                 }
-                else
+                catch
                 {
-                    MessageBox.Show(await response.Content.ReadAsStringAsync(), "Fail");
+                    MessageBox.Show("Error while deleting product", "Fail");
+                    deleteProduct_btn.Enabled = true;
                 }
-                deleteProduct_btn.Enabled = true;
-            }
-            catch
-            {
-                MessageBox.Show("Error while deleting product", "Fail");
-                deleteProduct_btn.Enabled = true;
+                Load_List();
             }
         }
 
         private async void productEdit_btn_Click(object sender, EventArgs e)
         {
             productEdit_btn.Enabled = false;
-            var json = JsonConvert.SerializeObject(new PRODUCT()
+            var price1 = txtBox_Price.Text.ToString();
+            price1 = Regex.Replace(price1, " ", "");
+            price1 = Regex.Replace(price1, ",", "");
+            price1 = Regex.Replace(price1, "đ", "");
+            int truePrice = Convert.ToInt32(price1);
+            price1 = txtBox_PromoPrice.Text.ToString();
+            price1 = Regex.Replace(price1, ",", "");
+            price1 = Regex.Replace(price1, " ", "");
+            price1 = Regex.Replace(price1, "đ", "");
+            int trueProPrice = Convert.ToInt32(price1);
+            bool isCheck = checkBox_status.Checked;
+            PRODUCT newProduct = new PRODUCT()
             {
                 ProductName = txtbox_ProductName.Text.ToString()
                 ,
                 ProductDescription = txtBox_Description.Text.ToString()
                 ,
-                ProductPrice = Int32.Parse(txtBox_Price.Text)
+                ProductPrice = truePrice
                 ,
-                PromotionPrice = Int32.Parse(txtBox_PromoPrice.Text)
+                PromotionPrice = trueProPrice
                 ,
-                ProductStock = Int32.Parse(txtBox_Stock.Text)
+                ProductStock = Convert.ToInt32(txtBox_Stock.Text)
                 ,
                 ProductImage = txtBox_Img.Text.ToString()
                 ,
-                ProductStatus = checkBox_status.Checked
-            }) ;
+                ProductStatus = isCheck
+            };
+
+            var json = JsonConvert.SerializeObject(newProduct);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
-            string url = GlobalVariable.url + "api/product/update?id=" + productID_lbl.Text;
+            var idBrand = productID_lbl.Text.ToString();
+            string url = GlobalVariable.url + "api/product/update?id=" + idBrand;
 
             try
             {
@@ -164,19 +176,27 @@ namespace QLSV
                 var response = await client.PutAsync(url, data);
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Update Success", "Success");
+                    MessageBox.Show("Update !");
                     Load_List();
                 }
                 else
                 {
-                    MessageBox.Show(await response.Content.ReadAsStringAsync(), "Fail");
+                    MessageBox.Show("An Error while updating");
+                    Load_List();
                 }
-                productEdit_btn.Enabled = true;
             }
             catch
             {
-                MessageBox.Show("Error while updating product", "Fail");
-                productEdit_btn.Enabled = true;
+                MessageBox.Show("An Error while updating");
+                Load_List();
+            }
+        }
+        private void onlyNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
             }
         }
 
@@ -191,6 +211,37 @@ namespace QLSV
         }
         private void product_dtgv_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private async void btn_Find_ClickAsync(object sender, EventArgs e)
+        {
+            try {
+                loading_lbl.Visible = true;
+                string productID = txtBox_findByID.Text.ToString();
+                string url = GlobalVariable.url + "api/product/detail?id=" + productID;
+                string json = await new GlobalVariable().GetApiAsync(url);
+                PRODUCT list = JsonConvert.DeserializeObject<PRODUCT>(json);
+                if (list != null)
+                {
+                    List<PRODUCT> listObj = new List<PRODUCT>();
+                    listObj.Add(list);
+                    product_dtgv.DataSource = null;
+                    product_dtgv.DataSource = listObj;
+                }
+                else
+                {
+                    MessageBox.Show("Cant Find this ID");
+                    Load_List();
+                }
+                loading_lbl.Visible = false;
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+                Load_List();
+            }
+
 
         }
     }

@@ -57,8 +57,9 @@
             // 
             // button_submit
             // 
-            this.button_submit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button_submit.BackColor = System.Drawing.Color.SeaGreen;
             this.button_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_submit.ForeColor = System.Drawing.SystemColors.Control;
             this.button_submit.Location = new System.Drawing.Point(175, 129);
             this.button_submit.Name = "button_submit";
             this.button_submit.Size = new System.Drawing.Size(182, 45);
@@ -88,12 +89,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(540, 197);
             this.Controls.Add(this.textBox_pass);
             this.Controls.Add(this.textBox_userName);
             this.Controls.Add(this.button_submit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.Control;
             this.Name = "LoginForms";
             this.Text = "LoginForms";
             this.ResumeLayout(false);

@@ -108,18 +108,18 @@ namespace QLSV
         }
         private void DestroyDTDV()
         {
-            //if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
-            //{
-            //    Brand_Frm.Instance.DestroyDTGV();
-            //}
-            //if (!SideUnderPanel.Controls.Contains(Product_Frm.Instance))
-            //{
-            //    Product_Frm.Instance.DestroyDTDV();
-            //}
-            //if (!SideUnderPanel.Controls.Contains(Order_Frm.Instance))
-            //{
-            //    Order_Frm.Instance.DestroyDTGV();
-            //}
+            if (SideUnderPanel.Controls.Contains(Product_Frm.Instance))
+            {
+                SideUnderPanel.Controls.Clear();
+            }
+            if (SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
+            {
+                SideUnderPanel.Controls.Clear();
+            }
+            if (SideUnderPanel.Controls.Contains(Order_Frm.Instance))
+            {
+                SideUnderPanel.Controls.Clear();
+            }
         }
 
 
