@@ -71,3 +71,4 @@ C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.csproj.CopyComplete
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.exe
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.pdb
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.Order_Frm.resources
+C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.Order_Detail_Frm.resources

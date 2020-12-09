@@ -1,4 +1,4 @@
-namespace APIBanDienThoai.Models
+namespace QLSV.Models
 {
     using System;
     using System.Collections.Generic;

@@ -7,7 +7,7 @@ using System.Web;
 
 
 
-namespace APIBanDienThoai.Common
+namespace QLSV.Common
 {
     public class GlobalVariable
     {

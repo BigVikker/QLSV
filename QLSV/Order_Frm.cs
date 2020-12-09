@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using APIBanDienThoai.Common;
+using QLSV.Common;
 using Newtonsoft.Json;
-using APIBanDienThoai.Models;
+using QLSV.Models;
 using System.Net.Http;
 
 namespace QLSV
@@ -52,10 +52,7 @@ namespace QLSV
             InitializeComponent();
             Load_List();
         }
-        public void DestroyDTGV()
-        {
-            order_dtgv.DataSource = null;
-        }
+
         private void order_dtgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -63,42 +60,7 @@ namespace QLSV
 
         private async void orderEdit_btn_Click(object sender, EventArgs e)
         {
-            //orderEdit_btn.Enabled = false;
-            //var json = JsonConvert.SerializeObject(new BRAND()
-            //{
-            //    BrandName = brandname_txtbox.Text
-            //});
-            //var data = new StringContent(json, Encoding.UTF8, "application/json");
-            //string url = GlobalVariable.url + "api/brand/update?id=" + brandid_lbl.Text;
-
-            //try
-            //{
-            //    var client = new HttpClient();
-            //    //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", AdminController.AdminToken);
-            //    client.BaseAddress = new Uri(url);
-
-            //    var response = await client.PutAsync(url, data);
-            //    if (response.IsSuccessStatusCode)
-            //    {
-            //        MessageBox.Show("Update Success", "Success");
-            //        Load_List();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show(await response.Content.ReadAsStringAsync(), "Fail");
-            //    }
-            //    orderEdit_btn.Enabled = true;
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Error while updating brand", "Fail");
-            //    orderEdit_btn.Enabled = true;
-            //}
-        }
-
-        private void bunifuCustomLabel7_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void order_dtgv_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -1,11 +1,9 @@
-namespace APIBanDienThoai.Models
+namespace QLSV.Models
 {
     using System;
-    using System.Collections.Generic;
 
     public partial class ORDER
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         
         public int OrderID { get; set; }
 

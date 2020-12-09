@@ -1,5 +1,5 @@
-﻿using APIBanDienThoai.Common;
-using APIBanDienThoai.Models;
+﻿using QLSV.Common;
+using QLSV.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
