@@ -34,7 +34,6 @@
             this.UnderPanel = new System.Windows.Forms.Panel();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.AboutForm = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.ReportForm = new Bunifu.Framework.UI.BunifuFlatButton();
             this.MenuLabel = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_product = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_brand = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -73,7 +72,6 @@
             // 
             this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.SidePanel.Controls.Add(this.AboutForm);
-            this.SidePanel.Controls.Add(this.ReportForm);
             this.SidePanel.Controls.Add(this.MenuLabel);
             this.SidePanel.Controls.Add(this.btn_product);
             this.SidePanel.Controls.Add(this.btn_brand);
@@ -106,7 +104,7 @@
             this.AboutForm.IconVisible = true;
             this.AboutForm.IconZoom = 50D;
             this.AboutForm.IsTab = true;
-            this.AboutForm.Location = new System.Drawing.Point(3, 371);
+            this.AboutForm.Location = new System.Drawing.Point(0, 253);
             this.AboutForm.Name = "AboutForm";
             this.AboutForm.Normalcolor = System.Drawing.Color.Transparent;
             this.AboutForm.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(67)))));
@@ -120,42 +118,6 @@
             this.AboutForm.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AboutForm.UseWaitCursor = true;
             this.AboutForm.Click += new System.EventHandler(this.OrderForm_Click);
-            // 
-            // ReportForm
-            // 
-            this.ReportForm.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(137)))), ((int)(((byte)(218)))));
-            this.ReportForm.BackColor = System.Drawing.Color.Transparent;
-            this.ReportForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ReportForm.BorderRadius = 0;
-            this.ReportForm.ButtonText = "Customer";
-            this.ReportForm.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.ReportForm.DisabledColor = System.Drawing.Color.Gray;
-            this.ReportForm.Iconcolor = System.Drawing.Color.Transparent;
-            this.ReportForm.Iconimage = ((System.Drawing.Image)(resources.GetObject("ReportForm.Iconimage")));
-            this.ReportForm.Iconimage_right = null;
-            this.ReportForm.Iconimage_right_Selected = null;
-            this.ReportForm.Iconimage_Selected = null;
-            this.ReportForm.IconMarginLeft = 10;
-            this.ReportForm.IconMarginRight = 0;
-            this.ReportForm.IconRightVisible = true;
-            this.ReportForm.IconRightZoom = 0D;
-            this.ReportForm.IconVisible = true;
-            this.ReportForm.IconZoom = 50D;
-            this.ReportForm.IsTab = true;
-            this.ReportForm.Location = new System.Drawing.Point(0, 253);
-            this.ReportForm.Name = "ReportForm";
-            this.ReportForm.Normalcolor = System.Drawing.Color.Transparent;
-            this.ReportForm.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(63)))), ((int)(((byte)(67)))));
-            this.ReportForm.OnHoverTextColor = System.Drawing.Color.White;
-            this.ReportForm.selected = false;
-            this.ReportForm.Size = new System.Drawing.Size(200, 112);
-            this.ReportForm.TabIndex = 3;
-            this.ReportForm.Text = "Customer";
-            this.ReportForm.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ReportForm.Textcolor = System.Drawing.Color.White;
-            this.ReportForm.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportForm.UseWaitCursor = true;
-            this.ReportForm.Click += new System.EventHandler(this.ReportForm_Click);
             // 
             // MenuLabel
             // 
@@ -354,7 +316,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_product;
         private Bunifu.Framework.UI.BunifuCustomLabel MenuLabel;
         private Bunifu.Framework.UI.BunifuFlatButton AboutForm;
-        private Bunifu.Framework.UI.BunifuFlatButton ReportForm;
         private System.Windows.Forms.Panel SideUnderPanel;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox LabelTextBox;
         public System.Windows.Forms.Panel HeaderPanel;

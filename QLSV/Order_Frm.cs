@@ -106,20 +106,27 @@ namespace QLSV
             int rowIndex = e.RowIndex;
             orderID_lbl.Text = order_dtgv.Rows[rowIndex].Cells[0].Value.ToString();
             txtBox_dateOrder.Text = order_dtgv.Rows[rowIndex].Cells[1].Value.ToString();
-            txtBox_total.Text = order_dtgv.Rows[rowIndex].Cells[2].Value.ToString();
-            txtBox_cusName.Text = order_dtgv.Rows[rowIndex].Cells[3].Value.ToString();
-            txtBox_cusPhone.Text = order_dtgv.Rows[rowIndex].Cells[4].Value.ToString();
-            txtBox_cusAddress.Text = order_dtgv.Rows[rowIndex].Cells[5].Value.ToString();
-            txtBox_Status.Text = order_dtgv.Rows[rowIndex].Cells[6].Value.ToString();
-            try
-            {
-                lable_CustomerID.Text = order_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
-            }
-            catch
-            {
-                lable_CustomerID.Text = null;
-            }
 
+            var total = order_dtgv.Rows[rowIndex].Cells[2].Value;
+            txtBox_total.Text = Convert.ToDecimal(total).ToString("#,##0") + "đ";
+
+           
+            var cusName = order_dtgv.Rows[rowIndex].Cells[3].Value;
+            txtBox_cusName.Text = (cusName == null) ? "null" : cusName.ToString();
+
+            var cusPhone = order_dtgv.Rows[rowIndex].Cells[4].Value;
+            txtBox_cusPhone.Text = (cusPhone == null) ? "null" : cusPhone.ToString();
+
+            var cusAdd = order_dtgv.Rows[rowIndex].Cells[5].Value;
+            txtBox_cusAddress.Text = (cusAdd == null) ? "null" : cusAdd.ToString();
+
+            txtBox_Status.Text = order_dtgv.Rows[rowIndex].Cells[6].Value.ToString();
+            var cusID = order_dtgv.Rows[rowIndex].Cells[7].Value;
+            lable_CustomerID.Text = (cusID == null) ? "null" : cusID.ToString();
+
+            //txtBox_cusName.Text = order_dtgv.Rows[rowIndex].Cells[3].Value.ToString();
+            //txtBox_cusPhone.Text = order_dtgv.Rows[rowIndex].Cells[4].Value.ToString();
+            //txtBox_cusAddress.Text = order_dtgv.Rows[rowIndex].Cells[5].Value.ToString();
         }
     }
 }
