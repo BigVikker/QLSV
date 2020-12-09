@@ -94,14 +94,14 @@ namespace QLSV
 
         private void AboutForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
+            if (!SideUnderPanel.Controls.Contains(OrderForm.Instance))
             {
-                SideUnderPanel.Controls.Add(Brand_Frm.Instance);
-                Brand_Frm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(OrderForm.Instance);
+                OrderForm.Instance.BringToFront();
             }
             else
             {
-                Brand_Frm.Instance.BringToFront();
+                OrderForm.Instance.BringToFront();
             }
             //Add_Frm.Instance.DTGV_Layout_order();
             //LabelTextBox.Text = "Quản lý đặt hàng";

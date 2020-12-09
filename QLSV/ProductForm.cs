@@ -88,7 +88,7 @@ namespace QLSV
                 txtBox_PromoPrice.Text = "0";
             }
             txtBox_Stock.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
-            txtBox_Img.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
+            txtBox_Img.Text = product_dtgv.Rows[rowIndex].Cells[6].Value.ToString();
             if (product_dtgv.Rows[rowIndex].Cells[10].Value.ToString() == "True")
             {
                 checkBox_status.Checked = true;

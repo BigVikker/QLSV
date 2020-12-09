@@ -68,3 +68,4 @@ C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.csprojAssemblyReference.c
 C:\Users\conso\source\repos\AppQLShopDT\QLSV\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.Brand_Frm.resources
 C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.ProductForm.resources
+C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.OrderForm.resources

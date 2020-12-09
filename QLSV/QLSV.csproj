@@ -92,7 +92,14 @@
     <Compile Include="Models\ADMIN.cs" />
     <Compile Include="Models\BRAND.cs" />
     <Compile Include="Models\CUSTOMER.cs" />
+    <Compile Include="Models\ORDER.cs" />
     <Compile Include="Models\PRODUCT.cs" />
+    <Compile Include="OrderForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
