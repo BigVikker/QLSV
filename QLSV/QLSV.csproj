@@ -76,6 +76,12 @@
     <Compile Include="ChirldForm\CreateProductForm.Designer.cs">
       <DependentUpon>CreateProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChirldForm\OrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChirldForm\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\GlobalVariable.cs" />
     <Compile Include="LoginForms.cs">
       <SubType>Form</SubType>
@@ -93,6 +99,7 @@
     <Compile Include="Models\BRAND.cs" />
     <Compile Include="Models\CUSTOMER.cs" />
     <Compile Include="Models\ORDER.cs" />
+    <Compile Include="Models\ORDERSTATUS.cs" />
     <Compile Include="Order_Detail_Frm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChirldForm\CreateProductForm.resx">
       <DependentUpon>CreateProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChirldForm\OrderDetail.resx">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForms.resx">
       <DependentUpon>LoginForms.cs</DependentUpon>

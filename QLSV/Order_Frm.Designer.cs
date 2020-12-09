@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lable_CustomerID = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.orderID_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -59,7 +59,7 @@
             this.lable_CustomerID.AutoSize = true;
             this.lable_CustomerID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable_CustomerID.ForeColor = System.Drawing.Color.White;
-            this.lable_CustomerID.Location = new System.Drawing.Point(1014, 466);
+            this.lable_CustomerID.Location = new System.Drawing.Point(1039, 466);
             this.lable_CustomerID.Name = "lable_CustomerID";
             this.lable_CustomerID.Size = new System.Drawing.Size(99, 20);
             this.lable_CustomerID.TabIndex = 56;
@@ -72,20 +72,21 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(899, 157);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(26, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(70, 20);
             this.bunifuCustomLabel1.TabIndex = 41;
-            this.bunifuCustomLabel1.Text = "ID";
+            this.bunifuCustomLabel1.Text = "Order ID";
             // 
             // orderID_lbl
             // 
             this.orderID_lbl.AutoSize = true;
             this.orderID_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderID_lbl.ForeColor = System.Drawing.Color.White;
-            this.orderID_lbl.Location = new System.Drawing.Point(1015, 157);
+            this.orderID_lbl.Location = new System.Drawing.Point(1040, 157);
             this.orderID_lbl.Name = "orderID_lbl";
             this.orderID_lbl.Size = new System.Drawing.Size(26, 20);
             this.orderID_lbl.TabIndex = 42;
             this.orderID_lbl.Text = "ID";
+            this.orderID_lbl.TextChanged += new System.EventHandler(this.orderID_lbl_TextChanged);
             // 
             // txtBox_dateOrder
             // 
@@ -99,7 +100,7 @@
             this.txtBox_dateOrder.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBox_dateOrder.LineMouseHoverColor = System.Drawing.Color.Lime;
             this.txtBox_dateOrder.LineThickness = 4;
-            this.txtBox_dateOrder.Location = new System.Drawing.Point(1019, 188);
+            this.txtBox_dateOrder.Location = new System.Drawing.Point(1044, 188);
             this.txtBox_dateOrder.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_dateOrder.Name = "txtBox_dateOrder";
             this.txtBox_dateOrder.Size = new System.Drawing.Size(171, 33);
@@ -141,7 +142,7 @@
             this.txtBox_total.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBox_total.LineMouseHoverColor = System.Drawing.Color.Lime;
             this.txtBox_total.LineThickness = 4;
-            this.txtBox_total.Location = new System.Drawing.Point(1019, 234);
+            this.txtBox_total.Location = new System.Drawing.Point(1044, 234);
             this.txtBox_total.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_total.Name = "txtBox_total";
             this.txtBox_total.Size = new System.Drawing.Size(171, 33);
@@ -216,7 +217,7 @@
             this.txtBox_cusName.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBox_cusName.LineMouseHoverColor = System.Drawing.Color.Lime;
             this.txtBox_cusName.LineThickness = 4;
-            this.txtBox_cusName.Location = new System.Drawing.Point(1019, 277);
+            this.txtBox_cusName.Location = new System.Drawing.Point(1044, 277);
             this.txtBox_cusName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_cusName.Name = "txtBox_cusName";
             this.txtBox_cusName.Size = new System.Drawing.Size(171, 33);
@@ -236,7 +237,7 @@
             this.txtBox_cusAddress.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBox_cusAddress.LineMouseHoverColor = System.Drawing.Color.Lime;
             this.txtBox_cusAddress.LineThickness = 4;
-            this.txtBox_cusAddress.Location = new System.Drawing.Point(1019, 320);
+            this.txtBox_cusAddress.Location = new System.Drawing.Point(1044, 320);
             this.txtBox_cusAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_cusAddress.Name = "txtBox_cusAddress";
             this.txtBox_cusAddress.Size = new System.Drawing.Size(171, 33);
@@ -256,7 +257,7 @@
             this.txtBox_cusPhone.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBox_cusPhone.LineMouseHoverColor = System.Drawing.Color.Lime;
             this.txtBox_cusPhone.LineThickness = 4;
-            this.txtBox_cusPhone.Location = new System.Drawing.Point(1019, 365);
+            this.txtBox_cusPhone.Location = new System.Drawing.Point(1044, 365);
             this.txtBox_cusPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_cusPhone.Name = "txtBox_cusPhone";
             this.txtBox_cusPhone.Size = new System.Drawing.Size(171, 33);
@@ -276,7 +277,7 @@
             this.txtBox_Status.LineIdleColor = System.Drawing.Color.Gray;
             this.txtBox_Status.LineMouseHoverColor = System.Drawing.Color.Lime;
             this.txtBox_Status.LineThickness = 4;
-            this.txtBox_Status.Location = new System.Drawing.Point(1019, 411);
+            this.txtBox_Status.Location = new System.Drawing.Point(1044, 411);
             this.txtBox_Status.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox_Status.Name = "txtBox_Status";
             this.txtBox_Status.Size = new System.Drawing.Size(171, 33);
@@ -306,7 +307,7 @@
             this.orderEdit_btn.IconVisible = true;
             this.orderEdit_btn.IconZoom = 90D;
             this.orderEdit_btn.IsTab = false;
-            this.orderEdit_btn.Location = new System.Drawing.Point(899, 566);
+            this.orderEdit_btn.Location = new System.Drawing.Point(1044, 566);
             this.orderEdit_btn.Name = "orderEdit_btn";
             this.orderEdit_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.orderEdit_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -322,19 +323,19 @@
             // 
             // order_dtgv
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.order_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.order_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.order_dtgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.order_dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.order_dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.order_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.order_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.order_dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.order_dtgv.DoubleBuffered = true;
             this.order_dtgv.EnableHeadersVisualStyles = false;
@@ -346,14 +347,13 @@
             this.order_dtgv.Size = new System.Drawing.Size(721, 449);
             this.order_dtgv.TabIndex = 7;
             this.order_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.order_dtgv_CellClick);
-            this.order_dtgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.order_dtgv_CellContentClick);
             // 
             // loading_lbl
             // 
             this.loading_lbl.AutoSize = true;
             this.loading_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loading_lbl.ForeColor = System.Drawing.Color.White;
-            this.loading_lbl.Location = new System.Drawing.Point(204, 158);
+            this.loading_lbl.Location = new System.Drawing.Point(318, 198);
             this.loading_lbl.Name = "loading_lbl";
             this.loading_lbl.Size = new System.Drawing.Size(78, 20);
             this.loading_lbl.TabIndex = 19;
@@ -394,7 +394,7 @@
             this.Controls.Add(this.orderEdit_btn);
             this.Controls.Add(this.groupBox2);
             this.Name = "Order_Frm";
-            this.Size = new System.Drawing.Size(1200, 640);
+            this.Size = new System.Drawing.Size(1258, 649);
             ((System.ComponentModel.ISupportInitialize)(this.order_dtgv)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
