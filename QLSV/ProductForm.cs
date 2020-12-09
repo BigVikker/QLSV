@@ -103,7 +103,7 @@ namespace QLSV
                 deleteProduct_btn.Enabled = true;
                 return;
             }
-            string url = GlobalVariable.url + "api/brand/delete?id=" + productID_lbl.Text;
+            string url = GlobalVariable.url + "api/product/delete?id=" + productID_lbl.Text;
             try
             {
                 var client = new HttpClient();
@@ -124,7 +124,7 @@ namespace QLSV
             }
             catch
             {
-                MessageBox.Show("Error while deleting brand", "Fail");
+                MessageBox.Show("Error while deleting product", "Fail");
                 deleteProduct_btn.Enabled = true;
             }
         }
@@ -171,7 +171,7 @@ namespace QLSV
             }
             catch
             {
-                MessageBox.Show("Error while updating brand", "Fail");
+                MessageBox.Show("Error while updating product", "Fail");
                 productEdit_btn.Enabled = true;
             }
         }
