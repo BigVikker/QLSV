@@ -36,7 +36,6 @@
             this.order_dtgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.orderDelete_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.orderEdit_btn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.createOrder_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtBox_Status = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtBox_cusPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtBox_cusAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -187,40 +186,6 @@
             this.orderEdit_btn.Textcolor = System.Drawing.Color.White;
             this.orderEdit_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderEdit_btn.Click += new System.EventHandler(this.orderEdit_btn_Click);
-            // 
-            // createOrder_btn
-            // 
-            this.createOrder_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.createOrder_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.createOrder_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.createOrder_btn.BorderRadius = 0;
-            this.createOrder_btn.ButtonText = "Create";
-            this.createOrder_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.createOrder_btn.DisabledColor = System.Drawing.Color.Gray;
-            this.createOrder_btn.Iconcolor = System.Drawing.Color.Transparent;
-            this.createOrder_btn.Iconimage = null;
-            this.createOrder_btn.Iconimage_right = null;
-            this.createOrder_btn.Iconimage_right_Selected = null;
-            this.createOrder_btn.Iconimage_Selected = null;
-            this.createOrder_btn.IconMarginLeft = 0;
-            this.createOrder_btn.IconMarginRight = 0;
-            this.createOrder_btn.IconRightVisible = true;
-            this.createOrder_btn.IconRightZoom = 0D;
-            this.createOrder_btn.IconVisible = true;
-            this.createOrder_btn.IconZoom = 90D;
-            this.createOrder_btn.IsTab = false;
-            this.createOrder_btn.Location = new System.Drawing.Point(747, 111);
-            this.createOrder_btn.Name = "createOrder_btn";
-            this.createOrder_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.createOrder_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.createOrder_btn.OnHoverTextColor = System.Drawing.Color.White;
-            this.createOrder_btn.selected = false;
-            this.createOrder_btn.Size = new System.Drawing.Size(146, 44);
-            this.createOrder_btn.TabIndex = 26;
-            this.createOrder_btn.Text = "Create";
-            this.createOrder_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.createOrder_btn.Textcolor = System.Drawing.Color.White;
-            this.createOrder_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txtBox_Status
             // 
@@ -453,7 +418,7 @@
             this.lable_CustomerID.TabIndex = 56;
             this.lable_CustomerID.Text = "Customer ID";
             // 
-            // OrderForm
+            // Order_Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -474,12 +439,11 @@
             this.Controls.Add(this.txtBox_dateOrder);
             this.Controls.Add(this.orderID_lbl);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.createOrder_btn);
             this.Controls.Add(this.orderDelete_btn);
             this.Controls.Add(this.orderEdit_btn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label_ThongBao);
-            this.Name = "OrderForm";
+            this.Name = "Order_Frm";
             this.Size = new System.Drawing.Size(1200, 640);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -497,7 +461,6 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid order_dtgv;
         private Bunifu.Framework.UI.BunifuFlatButton orderDelete_btn;
         private Bunifu.Framework.UI.BunifuFlatButton orderEdit_btn;
-        private Bunifu.Framework.UI.BunifuFlatButton createOrder_btn;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBox_Status;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBox_cusPhone;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBox_cusAddress;

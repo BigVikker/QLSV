@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.deleteProduct_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.productEdit_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -51,6 +51,7 @@
             this.txtBox_Img = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtBox_Stock = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.checkBox_status = new System.Windows.Forms.CheckBox();
+            this.createProduct_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product_dtgv)).BeginInit();
             this.SuspendLayout();
@@ -150,19 +151,19 @@
             // 
             // product_dtgv
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.product_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.product_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.product_dtgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.product_dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.product_dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.product_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.product_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.product_dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.product_dtgv.DoubleBuffered = true;
             this.product_dtgv.EnableHeadersVisualStyles = false;
@@ -407,6 +408,41 @@
             this.checkBox_status.Text = "Sell";
             this.checkBox_status.UseVisualStyleBackColor = true;
             // 
+            // createProduct_btn
+            // 
+            this.createProduct_btn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.createProduct_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.createProduct_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.createProduct_btn.BorderRadius = 0;
+            this.createProduct_btn.ButtonText = "Create";
+            this.createProduct_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createProduct_btn.DisabledColor = System.Drawing.Color.Gray;
+            this.createProduct_btn.Iconcolor = System.Drawing.Color.Transparent;
+            this.createProduct_btn.Iconimage = null;
+            this.createProduct_btn.Iconimage_right = null;
+            this.createProduct_btn.Iconimage_right_Selected = null;
+            this.createProduct_btn.Iconimage_Selected = null;
+            this.createProduct_btn.IconMarginLeft = 0;
+            this.createProduct_btn.IconMarginRight = 0;
+            this.createProduct_btn.IconRightVisible = true;
+            this.createProduct_btn.IconRightZoom = 0D;
+            this.createProduct_btn.IconVisible = true;
+            this.createProduct_btn.IconZoom = 90D;
+            this.createProduct_btn.IsTab = false;
+            this.createProduct_btn.Location = new System.Drawing.Point(748, 109);
+            this.createProduct_btn.Name = "createProduct_btn";
+            this.createProduct_btn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.createProduct_btn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.createProduct_btn.OnHoverTextColor = System.Drawing.Color.White;
+            this.createProduct_btn.selected = false;
+            this.createProduct_btn.Size = new System.Drawing.Size(146, 44);
+            this.createProduct_btn.TabIndex = 11;
+            this.createProduct_btn.Text = "Create";
+            this.createProduct_btn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.createProduct_btn.Textcolor = System.Drawing.Color.White;
+            this.createProduct_btn.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createProduct_btn.Click += new System.EventHandler(this.createProduct_btn_Click);
+            // 
             // Product_Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,6 +466,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.deleteProduct_btn);
+            this.Controls.Add(this.createProduct_btn);
             this.Controls.Add(this.productEdit_btn);
             this.Name = "Product_Frm";
             this.Size = new System.Drawing.Size(1258, 649);
@@ -464,5 +501,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBox_Img;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtBox_Stock;
         private System.Windows.Forms.CheckBox checkBox_status;
+        private Bunifu.Framework.UI.BunifuFlatButton createProduct_btn;
     }
 }
