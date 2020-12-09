@@ -119,7 +119,7 @@
             this.AboutForm.Textcolor = System.Drawing.Color.White;
             this.AboutForm.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AboutForm.UseWaitCursor = true;
-            this.AboutForm.Click += new System.EventHandler(this.AboutForm_Click);
+            this.AboutForm.Click += new System.EventHandler(this.OrderForm_Click);
             // 
             // ReportForm
             // 
@@ -202,7 +202,7 @@
             this.btn_product.Textcolor = System.Drawing.Color.White;
             this.btn_product.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_product.UseWaitCursor = true;
-            this.btn_product.Click += new System.EventHandler(this.ScoreForm_Click);
+            this.btn_product.Click += new System.EventHandler(this.ProductForm_Click);
             // 
             // btn_brand
             // 
@@ -238,7 +238,7 @@
             this.btn_brand.Textcolor = System.Drawing.Color.White;
             this.btn_brand.TextFont = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_brand.UseWaitCursor = true;
-            this.btn_brand.Click += new System.EventHandler(this.AddForm_Click);
+            this.btn_brand.Click += new System.EventHandler(this.BrandForm_Click);
             // 
             // SideUnderPanel
             // 

@@ -52,7 +52,10 @@ namespace QLSV
             InitializeComponent();
             Load_List();
         }
-
+        public void DestroyDTGV()
+        {
+            order_dtgv.DataSource = null;
+        }
         private void order_dtgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

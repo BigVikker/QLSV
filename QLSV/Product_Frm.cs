@@ -185,5 +185,13 @@ namespace QLSV
             CreateProductForm newform = new CreateProductForm(this);
             newform.Show();
         }
+        public void DestroyDTDV()
+        {
+            product_dtgv.DataSource = null;
+        }
+        private void product_dtgv_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

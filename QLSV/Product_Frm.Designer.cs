@@ -210,6 +210,7 @@
             this.product_dtgv.Size = new System.Drawing.Size(721, 449);
             this.product_dtgv.TabIndex = 7;
             this.product_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.product_dtgv_CellClick);
+            this.product_dtgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.product_dtgv_CellContentClick_1);
             // 
             // productID_lbl
             // 

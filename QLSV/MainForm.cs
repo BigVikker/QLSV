@@ -47,8 +47,23 @@ namespace QLSV
             }
         }
 
-        private void AddForm_Click(object sender, EventArgs e)
+        //private void AddForm_Click(object sender, EventArgs e)
+        //{
+        //    if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
+        //    {
+        //        SideUnderPanel.Controls.Add(Brand_Frm.Instance);
+        //        Brand_Frm.Instance.BringToFront();
+        //    }
+        //    else
+        //    {
+        //        Brand_Frm.Instance.BringToFront();
+        //    }
+        //    //Add_Frm.Instance.DTGV_Layout_product();
+        //    //LabelTextBox.Text = "Quản lý sản phẩm";
+        //}
+        private void BrandForm_Click(object sender, EventArgs e)
         {
+            DestroyDTDV();
             if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
             {
                 SideUnderPanel.Controls.Add(Brand_Frm.Instance);
@@ -62,8 +77,23 @@ namespace QLSV
             //LabelTextBox.Text = "Quản lý sản phẩm";
         }
 
-        private void ScoreForm_Click(object sender, EventArgs e)
+        //private void ScoreForm_Click(object sender, EventArgs e)
+        //{
+        //    if (!SideUnderPanel.Controls.Contains(Product_Frm.Instance))
+        //    {
+        //        SideUnderPanel.Controls.Add(Product_Frm.Instance);
+        //        Product_Frm.Instance.BringToFront();
+        //    }
+        //    else
+        //    {
+        //        Product_Frm.Instance.BringToFront();
+        //    }
+        //    //Add_Frm.Instance.DTGV_Layout_Brand();
+        //    //LabelTextBox.Text = "Quản lý Brand";
+        //}
+        private void ProductForm_Click(object sender, EventArgs e)
         {
+            DestroyDTDV();
             if (!SideUnderPanel.Controls.Contains(Product_Frm.Instance))
             {
                 SideUnderPanel.Controls.Add(Product_Frm.Instance);
@@ -76,9 +106,26 @@ namespace QLSV
             //Add_Frm.Instance.DTGV_Layout_Brand();
             //LabelTextBox.Text = "Quản lý Brand";
         }
+        private void DestroyDTDV()
+        {
+            if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
+            {
+                Brand_Frm.Instance.DestroyDTGV();
+            }
+            if (!SideUnderPanel.Controls.Contains(Product_Frm.Instance))
+            {
+                Product_Frm.Instance.DestroyDTDV();
+            }
+            if (!SideUnderPanel.Controls.Contains(Order_Frm.Instance))
+            {
+                Order_Frm.Instance.DestroyDTGV();
+            }
+        }
+
 
         private void ReportForm_Click(object sender, EventArgs e)
         {
+            DestroyDTDV();
             if (!SideUnderPanel.Controls.Contains(Brand_Frm.Instance))
             {
                 SideUnderPanel.Controls.Add(Brand_Frm.Instance);
@@ -94,6 +141,21 @@ namespace QLSV
 
         private void AboutForm_Click(object sender, EventArgs e)
         {
+            if (!SideUnderPanel.Controls.Contains(Order_Frm.Instance))
+            {
+                SideUnderPanel.Controls.Add(Order_Frm.Instance);
+                Order_Frm.Instance.BringToFront();
+            }
+            else
+            {
+                Order_Frm.Instance.BringToFront();
+            }
+            //Add_Frm.Instance.DTGV_Layout_order();
+            //LabelTextBox.Text = "Quản lý đặt hàng";
+        }
+        private void OrderForm_Click(object sender, EventArgs e)
+        {
+            DestroyDTDV();
             if (!SideUnderPanel.Controls.Contains(Order_Frm.Instance))
             {
                 SideUnderPanel.Controls.Add(Order_Frm.Instance);

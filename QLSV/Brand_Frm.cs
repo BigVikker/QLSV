@@ -113,7 +113,10 @@ namespace QLSV
                 brandedit_btn.Enabled = false;
 
         }
-
+        public void DestroyDTGV()
+        {
+            brand_dtgv.DataSource = null;
+        }
         private async void brandedit_btn_Click(object sender, EventArgs e)
         {
             brandedit_btn.Enabled = false;
