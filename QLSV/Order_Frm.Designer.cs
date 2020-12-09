@@ -1,6 +1,6 @@
 ﻿namespace QLSV
 {
-    partial class OrderForm
+    partial class Order_Frm
     {
         /// <summary> 
         /// Required designer variable.

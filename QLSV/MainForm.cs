@@ -64,14 +64,14 @@ namespace QLSV
 
         private void ScoreForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(ProductForm.Instance))
+            if (!SideUnderPanel.Controls.Contains(Product_Frm.Instance))
             {
-                SideUnderPanel.Controls.Add(ProductForm.Instance);
-                ProductForm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(Product_Frm.Instance);
+                Product_Frm.Instance.BringToFront();
             }
             else
             {
-                ProductForm.Instance.BringToFront();
+                Product_Frm.Instance.BringToFront();
             }
             //Add_Frm.Instance.DTGV_Layout_Brand();
             //LabelTextBox.Text = "Quản lý Brand";
@@ -94,14 +94,14 @@ namespace QLSV
 
         private void AboutForm_Click(object sender, EventArgs e)
         {
-            if (!SideUnderPanel.Controls.Contains(OrderForm.Instance))
+            if (!SideUnderPanel.Controls.Contains(Order_Frm.Instance))
             {
-                SideUnderPanel.Controls.Add(OrderForm.Instance);
-                OrderForm.Instance.BringToFront();
+                SideUnderPanel.Controls.Add(Order_Frm.Instance);
+                Order_Frm.Instance.BringToFront();
             }
             else
             {
-                OrderForm.Instance.BringToFront();
+                Order_Frm.Instance.BringToFront();
             }
             //Add_Frm.Instance.DTGV_Layout_order();
             //LabelTextBox.Text = "Quản lý đặt hàng";

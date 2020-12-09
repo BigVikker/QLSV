@@ -47,25 +47,27 @@ C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.csproj.CoreCompileIn
 C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.csproj.CopyComplete
 C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.exe
 C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.pdb
+C:\Users\conso\source\repos\AppQLShopDT\QLSV\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.Brand_Frm.resources
+C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.ProductForm.resources
+C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.OrderForm.resources
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\bin\Debug\QLSV.exe.config
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\bin\Debug\QLSV.exe
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\bin\Debug\QLSV.pdb
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.csprojAssemblyReference.cache
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.Brand_Frm.resources
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.ChirldForm.CreateBrandForm.resources
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.ChirldForm.CreateProductForm.resources
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.LoginForms.resources
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.MainForm.resources
+C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.Product_Frm.resources
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.Properties.Resources.resources
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.csproj.GenerateResource.cache
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.csproj.CoreCompileInputs.cache
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.csproj.CopyComplete
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.exe
 C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.pdb
-C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.csprojAssemblyReference.cache
-C:\Users\conso\source\repos\AppQLShopDT\QLSV\bin\Debug\Bunifu_UI_v1.5.3.dll
-C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.Brand_Frm.resources
-C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.ProductForm.resources
-C:\Users\conso\source\repos\AppQLShopDT\QLSV\obj\Debug\QLSV.OrderForm.resources
+C:\Users\Hoang Nguyen\Desktop\QLSV\QLSV\obj\Debug\QLSV.Order_Frm.resources

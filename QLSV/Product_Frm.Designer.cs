@@ -1,6 +1,6 @@
 ﻿namespace QLSV
 {
-    partial class ProductForm
+    partial class Product_Frm
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label_ThongBao = new System.Windows.Forms.Label();
             this.createProduct_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.deleteProduct_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.productEdit_btn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,17 +55,6 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.product_dtgv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label_ThongBao
-            // 
-            this.label_ThongBao.AutoSize = true;
-            this.label_ThongBao.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ThongBao.ForeColor = System.Drawing.Color.Lime;
-            this.label_ThongBao.Location = new System.Drawing.Point(422, 0);
-            this.label_ThongBao.Name = "label_ThongBao";
-            this.label_ThongBao.Size = new System.Drawing.Size(505, 40);
-            this.label_ThongBao.TabIndex = 9;
-            this.label_ThongBao.Text = "Phần mềm quản lý shop điện thoại";
             // 
             // createProduct_btn
             // 
@@ -222,7 +210,6 @@
             this.product_dtgv.Size = new System.Drawing.Size(721, 449);
             this.product_dtgv.TabIndex = 7;
             this.product_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.product_dtgv_CellClick);
-            this.product_dtgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.product_dtgv_CellContentClick);
             // 
             // productID_lbl
             // 
@@ -455,7 +442,7 @@
             this.checkBox_status.Text = "Sell";
             this.checkBox_status.UseVisualStyleBackColor = true;
             // 
-            // ProductForm
+            // Product_Frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -480,9 +467,8 @@
             this.Controls.Add(this.deleteProduct_btn);
             this.Controls.Add(this.createProduct_btn);
             this.Controls.Add(this.productEdit_btn);
-            this.Controls.Add(this.label_ThongBao);
-            this.Name = "ProductForm";
-            this.Size = new System.Drawing.Size(1200, 640);
+            this.Name = "Product_Frm";
+            this.Size = new System.Drawing.Size(1258, 649);
             this.Load += new System.EventHandler(this.ProductForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -493,7 +479,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label_ThongBao;
         private Bunifu.Framework.UI.BunifuFlatButton createProduct_btn;
         private Bunifu.Framework.UI.BunifuFlatButton deleteProduct_btn;
         private Bunifu.Framework.UI.BunifuFlatButton productEdit_btn;

@@ -29,13 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.RoundCorner = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.loading_lbl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.brand_dtgv = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.label_ThongBao = new System.Windows.Forms.Label();
             this.createBrand_btn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -82,19 +81,19 @@
             // 
             // brand_dtgv
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.brand_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.brand_dtgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.brand_dtgv.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.brand_dtgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.brand_dtgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.brand_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.brand_dtgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.brand_dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.brand_dtgv.DoubleBuffered = true;
             this.brand_dtgv.EnableHeadersVisualStyles = false;
@@ -107,17 +106,6 @@
             this.brand_dtgv.TabIndex = 7;
             this.brand_dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.brand_dtgv_CellClick);
             this.brand_dtgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.brand_dtgv_CellContentClick);
-            // 
-            // label_ThongBao
-            // 
-            this.label_ThongBao.AutoSize = true;
-            this.label_ThongBao.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ThongBao.ForeColor = System.Drawing.Color.Lime;
-            this.label_ThongBao.Location = new System.Drawing.Point(422, 0);
-            this.label_ThongBao.Name = "label_ThongBao";
-            this.label_ThongBao.Size = new System.Drawing.Size(505, 40);
-            this.label_ThongBao.TabIndex = 4;
-            this.label_ThongBao.Text = "Phần mềm quản lý shop điện thoại";
             // 
             // createBrand_btn
             // 
@@ -370,10 +358,9 @@
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.createBrand_btn);
-            this.Controls.Add(this.label_ThongBao);
             this.Controls.Add(this.groupBox2);
             this.Name = "Brand_Frm";
-            this.Size = new System.Drawing.Size(1200, 640);
+            this.Size = new System.Drawing.Size(1258, 649);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.brand_dtgv)).EndInit();
@@ -386,7 +373,6 @@
 
         private Bunifu.Framework.UI.BunifuElipse RoundCorner;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label_ThongBao;
         private Bunifu.Framework.UI.BunifuFlatButton createBrand_btn;
         private Bunifu.Framework.UI.BunifuCustomDataGrid brand_dtgv;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;

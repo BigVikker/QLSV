@@ -15,19 +15,19 @@ using QLSV.ChirldForm;
 
 namespace QLSV
 {
-    public partial class ProductForm : UserControl
+    public partial class Product_Frm : UserControl
     {
-        private static ProductForm inst;
-        public static ProductForm Instance
+        private static Product_Frm inst;
+        public static Product_Frm Instance
         {
             get
             {
                 if (inst == null || inst.IsDisposed)
-                    inst = new ProductForm();
+                    inst = new Product_Frm();
                 return inst;
             }
         }
-        public ProductForm()
+        public Product_Frm()
         {
             InitializeComponent();
             Load_List();
@@ -61,14 +61,14 @@ namespace QLSV
 
         private void product_dtgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            productID_lbl.Text = product_dtgv.Rows[rowIndex].Cells[0].Value.ToString();
-            txtbox_ProductName.Text = product_dtgv.Rows[rowIndex].Cells[1].Value.ToString();
-            txtBox_Description.Text = product_dtgv.Rows[rowIndex].Cells[2].Value.ToString();
-            txtBox_Price.Text = product_dtgv.Rows[rowIndex].Cells[3].Value.ToString();
-            txtBox_PromoPrice.Text = product_dtgv.Rows[rowIndex].Cells[4].Value.ToString();
-            txtBox_Stock.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
-            txtBox_Img.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
+            //int rowIndex = e.RowIndex;
+            //productID_lbl.Text = product_dtgv.Rows[rowIndex].Cells[0].Value.ToString();
+            //txtbox_ProductName.Text = product_dtgv.Rows[rowIndex].Cells[1].Value.ToString();
+            //txtBox_Description.Text = product_dtgv.Rows[rowIndex].Cells[2].Value.ToString();
+            //txtBox_Price.Text = product_dtgv.Rows[rowIndex].Cells[3].Value.ToString();
+            //txtBox_PromoPrice.Text = product_dtgv.Rows[rowIndex].Cells[4].Value.ToString();
+            //txtBox_Stock.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
+            //txtBox_Img.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
 
         }
 
@@ -79,14 +79,18 @@ namespace QLSV
             productID_lbl.Text = product_dtgv.Rows[rowIndex].Cells[0].Value.ToString();
             txtbox_ProductName.Text = product_dtgv.Rows[rowIndex].Cells[1].Value.ToString();
             txtBox_Description.Text = product_dtgv.Rows[rowIndex].Cells[2].Value.ToString();
-            txtBox_Price.Text = product_dtgv.Rows[rowIndex].Cells[3].Value.ToString();
-            try {
-                txtBox_PromoPrice.Text = product_dtgv.Rows[rowIndex].Cells[4].Value.ToString();
-            }
-            catch
-            {
-                txtBox_PromoPrice.Text = "0";
-            }
+            var price = product_dtgv.Rows[rowIndex].Cells[3].Value;
+            txtBox_Price.Text = Convert.ToDecimal(price).ToString("#,##0") + "đ";
+            var promo = product_dtgv.Rows[rowIndex].Cells[4].Value;
+            txtBox_PromoPrice.Text = (promo == null) ? "0đ" : Convert.ToDecimal(promo).ToString("#,##0") + "đ";
+
+            //try {
+            //    txtBox_PromoPrice.Text = product_dtgv.Rows[rowIndex].Cells[4].Value.ToString();
+            //}
+            //catch
+            //{
+            //    txtBox_PromoPrice.Text = "0";
+            //}
             txtBox_Stock.Text = product_dtgv.Rows[rowIndex].Cells[7].Value.ToString();
             txtBox_Img.Text = product_dtgv.Rows[rowIndex].Cells[6].Value.ToString();
             if (product_dtgv.Rows[rowIndex].Cells[10].Value.ToString() == "True")

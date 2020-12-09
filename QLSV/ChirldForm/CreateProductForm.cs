@@ -20,8 +20,8 @@ namespace QLSV.ChirldForm
         {
             InitializeComponent();
         }
-        public ProductForm mainForm { get; set; }
-        public CreateProductForm(ProductForm add_Frm)
+        public Product_Frm mainForm { get; set; }
+        public CreateProductForm(Product_Frm add_Frm)
         {
             InitializeComponent();
             this.mainForm = add_Frm;

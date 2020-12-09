@@ -14,15 +14,15 @@ using System.Net.Http;
 
 namespace QLSV
 {
-    public partial class OrderForm : UserControl
+    public partial class Order_Frm : UserControl
     {
-        private static OrderForm inst;
-        public static OrderForm Instance
+        private static Order_Frm inst;
+        public static Order_Frm Instance
         {
             get
             {
                 if (inst == null || inst.IsDisposed)
-                    inst = new OrderForm();
+                    inst = new Order_Frm();
                 return inst;
             }
         }
@@ -47,7 +47,7 @@ namespace QLSV
                 loading_lbl.Visible = false;
             }
         }
-        public OrderForm()
+        public Order_Frm()
         {
             InitializeComponent();
             Load_List();

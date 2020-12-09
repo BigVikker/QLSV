@@ -284,7 +284,7 @@
             this.MinimizedBtn.BackColor = System.Drawing.Color.Transparent;
             this.MinimizedBtn.Image = ((System.Drawing.Image)(resources.GetObject("MinimizedBtn.Image")));
             this.MinimizedBtn.ImageActive = null;
-            this.MinimizedBtn.Location = new System.Drawing.Point(1331, 8);
+            this.MinimizedBtn.Location = new System.Drawing.Point(1312, 8);
             this.MinimizedBtn.Name = "MinimizedBtn";
             this.MinimizedBtn.Size = new System.Drawing.Size(30, 30);
             this.MinimizedBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -298,7 +298,7 @@
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
             this.ExitBtn.ImageActive = null;
-            this.ExitBtn.Location = new System.Drawing.Point(1367, 8);
+            this.ExitBtn.Location = new System.Drawing.Point(1353, 8);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(30, 30);
             this.ExitBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
